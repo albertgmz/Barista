@@ -180,8 +180,8 @@ try {
   if (cold.wrapperCount !== 1 || cold.canvases.length !== 2)
     throw new Error(`Fabric canvas mounted more than once: ${JSON.stringify(cold)}`)
 
-  await fs.mkdir('docs/verification/0.4.0', { recursive: true })
-  await page.screenshot({ path: 'docs/verification/0.4.0/canvas-centering-after.png' })
+  await fs.mkdir('scratch/verification/0.4.0', { recursive: true })
+  await page.screenshot({ path: 'scratch/verification/0.4.0/canvas-centering-after.png' })
 
   await page.keyboard.press('Control+n')
   const newDialog = page.getByRole('dialog', { name: 'New Label' })

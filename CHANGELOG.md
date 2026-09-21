@@ -3,6 +3,25 @@
 All notable changes to Barista are documented here. This project follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and Semantic Versioning.
 
+## [0.5.1] - 2026-09-20 - "Latte"
+
+### Added
+
+- Editable human-readable captions below linear barcodes.
+- Automatic side-panel sizing that keeps the workspace tabs visible.
+
+### Fixed
+
+- Update notes display as readable text instead of raw HTML markup.
+- Canvas object menus reliably open at the right-click position.
+- Variable editing has an explicit Back to variables action, and variable autocomplete remains
+  visible above compact panels.
+
+### Changed
+
+- Smoke-test evidence is written outside product documentation; the documentation index now only
+  links maintained references.
+
 ## [0.5.0] - 2026-09-20 - "Latte"
 
 ### Added
@@ -76,3 +95,4 @@ All notable changes to Barista are documented here. This project follows
 
 [0.4.0]: https://github.com/albertgmz/Barista/releases/tag/v0.4.0
 [0.5.0]: https://github.com/albertgmz/Barista/releases/tag/v0.5.0
+[0.5.1]: https://github.com/albertgmz/Barista/releases/tag/v0.5.1

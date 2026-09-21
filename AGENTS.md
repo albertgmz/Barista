@@ -7,6 +7,9 @@ Barista is a strict-TypeScript Electron label designer and print application for
 - Use npm; `npm install` also fetches Electron through the `postinstall` hook.
 - Release versions use coffee codenames; record the version and codename in `CHANGELOG.md`.
 - Keep durable decisions in the relevant current document under `docs/`; do not create session logs.
+- Keep `docs/` concise: update an existing reference where possible. Do not add smoke-test output,
+  screenshots, session notes, or duplicate feature documents; transient verification belongs in
+  ignored `scratch/verification/`.
 - Do not mention automated code generation in product content, commits, or release notes.
 
 ## Commands

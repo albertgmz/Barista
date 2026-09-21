@@ -6,7 +6,7 @@ import * as fs from 'node:fs/promises'
 const env = { ...process.env }
 delete env.ELECTRON_RUN_AS_NODE
 
-await fs.mkdir('docs/verification/0.4.0', { recursive: true })
+await fs.mkdir('scratch/verification/0.4.0', { recursive: true })
 const app = await _electron.launch({
   args: ['.'],
   env: { ...env, BARISTA_SPLASH_MIN_MS: '10000' }
@@ -17,7 +17,7 @@ try {
     predicate: (candidate) => candidate.url().includes('splash')
   })
   await splash.getByText('Barista', { exact: true }).waitFor()
-  await splash.screenshot({ path: 'docs/verification/0.4.0/splash.png' })
+  await splash.screenshot({ path: 'scratch/verification/0.4.0/splash.png' })
 
   let page = app.windows().find((candidate) => !candidate.url().includes('splash'))
   if (!page)
@@ -36,11 +36,11 @@ try {
   await page.getByRole('menuitem', { name: 'About', exact: true }).click()
   const about = page.getByRole('dialog', { name: 'About Barista' })
   await about.waitFor()
-  await about.getByText('0.4.0 “Espresso”', { exact: true }).waitFor()
+  await about.getByText('0.5.1 “Latte”', { exact: true }).waitFor()
   await about.getByText(/No telemetry\. No data collection\./).waitFor()
   await page.waitForTimeout(250)
-  await page.screenshot({ path: 'docs/verification/0.4.0/about.png' })
-  await about.screenshot({ path: 'docs/verification/0.4.0/about-dialog.png' })
+  await page.screenshot({ path: 'scratch/verification/0.4.0/about.png' })
+  await about.screenshot({ path: 'scratch/verification/0.4.0/about-dialog.png' })
 
   await about.getByRole('button', { name: 'Open-source licenses' }).click()
   const licenses = page.getByRole('dialog', { name: 'Open-source licenses' })
@@ -53,7 +53,7 @@ try {
   await licenses.getByRole('button', { name: /OCR-B/ }).waitFor()
   await licenses.getByText('SIL OFL 1.1', { exact: true }).waitFor()
   await page.waitForTimeout(250)
-  await page.screenshot({ path: 'docs/verification/0.4.0/licenses.png' })
+  await page.screenshot({ path: 'scratch/verification/0.4.0/licenses.png' })
   await licenses.getByRole('button', { name: 'Close' }).click()
 
   await page.keyboard.press('Control+,')
@@ -62,7 +62,7 @@ try {
   await preferences.getByRole('tab', { name: 'Updates' }).click()
   await preferences.getByText('Check for updates automatically').waitFor()
   await page.waitForTimeout(250)
-  await page.screenshot({ path: 'docs/verification/0.4.0/update-preferences.png' })
+  await page.screenshot({ path: 'scratch/verification/0.4.0/update-preferences.png' })
 
   if (runtimeErrors.length > 0)
     throw new Error(`Renderer emitted errors:\n${runtimeErrors.join('\n')}`)

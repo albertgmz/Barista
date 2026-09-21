@@ -58,6 +58,7 @@ export const objectSchema = z.discriminatedUnion('kind', [
     quietZoneMm: dimension,
     showHumanReadable: z.boolean(),
     humanReadableFontSizePt: finite.positive().max(1000),
+    humanReadableText: z.string().max(10000).optional(),
     addCheckDigit: z.boolean(),
     color
   }),

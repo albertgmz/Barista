@@ -3,6 +3,9 @@
 <p align="center">
   <a href="https://github.com/albertgmz/Barista/actions/workflows/ci.yml"><img src="https://github.com/albertgmz/Barista/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status"></a>
   <a href="https://github.com/albertgmz/Barista/actions/workflows/release.yml"><img src="https://github.com/albertgmz/Barista/actions/workflows/release.yml/badge.svg" alt="Release status"></a>
+  <a href="https://github.com/albertgmz/Barista/releases/latest"><img src="https://img.shields.io/github/v/release/albertgmz/Barista?display_name=tag&label=latest" alt="Latest release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0--only-blue" alt="GPL-3.0-only license"></a>
+  <img src="https://img.shields.io/badge/platform-Windows%2010%20%26%2011-0078D4" alt="Windows 10 and 11">
 </p>
 
 <p align="center">
@@ -10,6 +13,11 @@
 </p>
 
 <p align="center"><strong>Design, serialize, and print professional labels on Windows.</strong></p>
+
+<p align="center">
+  <a href="https://github.com/albertgmz/Barista/releases/latest"><img src="https://img.shields.io/badge/Download-Installer-0f6cbd?style=for-the-badge&logo=windows&logoColor=white" alt="Download Barista installer"></a>
+  <a href="https://github.com/albertgmz/Barista/releases/latest"><img src="https://img.shields.io/badge/Download-Portable-4c8c4a?style=for-the-badge&logo=windows&logoColor=white" alt="Download Barista portable app"></a>
+</p>
 
 ## Highlights
 
@@ -23,16 +31,20 @@
 
 ## Download and install
 
-Download the installer or portable executable from
-[GitHub Releases](https://github.com/albertgmz/Barista/releases). Builds are currently unsigned, so
-Windows SmartScreen may ask you to confirm that you trust the download.
+Choose **Installer** for automatic in-app updates, Start-menu integration, and the usual Windows
+setup experience. Choose **Portable** to run Barista without installation; it opens the Releases
+page when a newer version is available. Both downloads are on
+[GitHub Releases](https://github.com/albertgmz/Barista/releases/latest). Builds are currently
+unsigned, so Windows SmartScreen may ask you to confirm that you trust the download.
 
 Barista supports Windows 10 and 11 (x64), installed Windows printers, common direct-thermal roll
 sizes including 2 × 1 and 4 × 6 inches, 60 × 35 mm stock, custom roll sizes, and supported sheet
 layouts.
 
-Project documentation is indexed in [`docs/`](docs/README.md). Developers can run `build.bat` for
-the verified Windows build.
+## For developers
+
+Project documentation is indexed in [`docs/`](docs/README.md). Run `npm install`, then `npm run dev`
+for development or `build.bat` for the verified Windows build.
 
 Barista contains no telemetry, collects no data, and will always be 100% open source. It is
 licensed under the [GNU General Public License v3.0](LICENSE).

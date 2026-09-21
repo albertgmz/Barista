@@ -44,6 +44,28 @@ try {
   const text = page.getByLabel('Text content')
   await text.waitFor()
   await text.fill('Color label')
+  const currentBox = await host.boundingBox()
+  const currentOrigin = await host.evaluate((element) => ({
+    x: Number(element.dataset.labelOriginX),
+    y: Number(element.dataset.labelOriginY),
+    pixelsPerMm: Number(element.dataset.pixelsPerMm)
+  }))
+  const currentObject = await page.evaluate(() => ({
+    x: Number(document.querySelector('input[aria-label="X (mm)"]')?.value),
+    y: Number(document.querySelector('input[aria-label="Y (mm)"]')?.value),
+    width: Number(document.querySelector('input[aria-label="Width (mm)"]')?.value),
+    height: Number(document.querySelector('input[aria-label="Height (mm)"]')?.value)
+  }))
+  if (!currentBox) throw new Error('Canvas has no visible bounds after creating text.')
+  await page.mouse.click(
+    currentBox.x + currentOrigin.x + (currentObject.x + currentObject.width / 2) * currentOrigin.pixelsPerMm,
+    currentBox.y + currentOrigin.y + (currentObject.y + currentObject.height / 2) * currentOrigin.pixelsPerMm,
+    { button: 'right' }
+  )
+  await page
+    .getByRole('menuitem', { name: 'Bind to variable...', exact: true })
+    .waitFor({ timeout: 5000 })
+  await page.keyboard.press('Escape')
   const color = page.getByLabel('Text color picker')
   await color.fill('#336699')
   if ((await color.inputValue()).toLocaleLowerCase() !== '#336699')
@@ -113,7 +135,7 @@ try {
     throw new Error('Keep inside label could not be switched off again.')
 
   console.log(
-    'Verified text editing, arbitrary color, and that Keep inside label pulls objects back into the stock.'
+    'Verified text editing, the object context menu, arbitrary color, and that Keep inside label pulls objects back into the stock.'
   )
 } finally {
   await app.evaluate(({ BrowserWindow }) =>

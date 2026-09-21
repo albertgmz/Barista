@@ -54,6 +54,9 @@ try {
   await page.keyboard.type('{')
   const autocomplete = page.getByRole('listbox', { name: 'Variable autocomplete' })
   await autocomplete.waitFor()
+  const autocompleteBox = await autocomplete.boundingBox()
+  if (!autocompleteBox || autocompleteBox.width < 300)
+    throw new Error('Variable autocomplete does not retain a usable width in the side panel.')
   await autocomplete.getByRole('button').first().click()
   if ((await field.locator('.variable-chip').count()) !== 2)
     throw new Error('Brace autocomplete did not insert a second variable chip.')
@@ -74,8 +77,10 @@ try {
   // Adding leaves the new variable collapsed, so its settings open on click.
   await page.getByRole('option', { name: /Column · field/ }).click()
   await page.getByLabel('Excel column', { exact: true }).waitFor()
-  await fs.mkdir('docs/verification/0.3.0', { recursive: true })
-  await page.screenshot({ path: 'docs/verification/0.3.0/easy-variables.png' })
+  await page.getByRole('button', { name: 'Back to variables' }).click()
+  await page.getByLabel('Excel column', { exact: true }).waitFor({ state: 'hidden' })
+  await fs.mkdir('scratch/verification/0.3.0', { recursive: true })
+  await page.screenshot({ path: 'scratch/verification/0.3.0/easy-variables.png' })
 
   // Moving an object must not write the canvas string back into the document:
   // the canvas carries wrapped lines, and with sample data on it carries

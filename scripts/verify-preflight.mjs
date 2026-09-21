@@ -102,8 +102,8 @@ try {
   const printButton = print.getByRole('button', { name: 'Print', exact: true })
   if (!(await printButton.isDisabled())) throw new Error('Strict preflight did not disable Print.')
 
-  await fs.mkdir('docs/verification/0.3.0', { recursive: true })
-  await page.screenshot({ path: 'docs/verification/0.3.0/preflight.png' })
+  await fs.mkdir('scratch/verification/0.3.0', { recursive: true })
+  await page.screenshot({ path: 'scratch/verification/0.3.0/preflight.png' })
   await print.getByRole('button', { name: 'Cancel' }).click()
   await page.keyboard.press('Control+,')
   await preferences.getByLabel('Preflight before printing').selectOption('warn')

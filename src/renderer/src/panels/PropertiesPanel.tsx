@@ -419,6 +419,15 @@ export function PropertiesPanel(): JSX.Element {
                   {number('barHeightMm', 0.1, 2000)}
                   {number('quietZoneMm', 0, 100)}
                   {check('showHumanReadable', 'Human-readable text')}
+                  {first.showHumanReadable ? (
+                    <TemplateField
+                      label="Caption below barcode"
+                      value={first.humanReadableText ?? ''}
+                      variables={d.template.variables}
+                      onChange={(value) => update('humanReadableText', value)}
+                      onCreateVariable={createInlineVariable}
+                    />
+                  ) : null}
                   {check('addCheckDigit', 'Check digit')}
                 </>
               ) : (

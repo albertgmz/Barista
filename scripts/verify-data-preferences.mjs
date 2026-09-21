@@ -44,8 +44,8 @@ try {
       )
   )
 
-  await fs.mkdir('docs/verification/0.3.0', { recursive: true })
-  await page.screenshot({ path: 'docs/verification/0.3.0/data-preferences.png' })
+  await fs.mkdir('scratch/verification/0.3.0', { recursive: true })
+  await page.screenshot({ path: 'scratch/verification/0.3.0/data-preferences.png' })
 
   await page.getByLabel('Data store', { exact: true }).selectOption('mysql')
   await page.getByLabel('Host', { exact: true }).waitFor()

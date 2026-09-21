@@ -63,8 +63,8 @@ try {
   await builder.getByLabel('Value source for 21').selectOption('variable')
   await builder.getByLabel('Variable for 21').selectOption('serial')
   await builder.getByText('(01)09501101530003(17)251231(21)0001', { exact: true }).waitFor()
-  await fs.mkdir('docs/verification/0.3.0', { recursive: true })
-  await page.screenshot({ path: 'docs/verification/0.3.0/autofit-gs1.png' })
+  await fs.mkdir('scratch/verification/0.3.0', { recursive: true })
+  await page.screenshot({ path: 'scratch/verification/0.3.0/autofit-gs1.png' })
   await builder.getByRole('button', { name: 'Apply', exact: true }).click()
   await builder.waitFor({ state: 'hidden' })
   const symbology = page.getByLabel('Symbology')
@@ -96,7 +96,7 @@ try {
       'GS1-128 data must be element strings starting with an application identifier in parentheses, for example (01)09501101530003'
     )
     .waitFor()
-  await page.screenshot({ path: 'docs/verification/0.3.0/barcode-symbology-rules.png' })
+  await page.screenshot({ path: 'scratch/verification/0.3.0/barcode-symbology-rules.png' })
   await page.getByRole('button', { name: 'Open GS1 Builder…' }).click()
   await builder.waitFor()
   await builder.getByRole('button', { name: 'Cancel', exact: true }).click()
@@ -110,7 +110,7 @@ try {
   await dataSource.waitFor()
   if ((await dataSource.inputValue()) !== 'fixed')
     throw new Error(`Literal barcode data was read as ${await dataSource.inputValue()}`)
-  await section.screenshot({ path: 'docs/verification/0.3.0/data-source-fixed.png' })
+  await section.screenshot({ path: 'scratch/verification/0.3.0/data-source-fixed.png' })
 
   await dataSource.selectOption('counter')
   await page.getByLabel('Source variable').waitFor()
@@ -122,7 +122,7 @@ try {
   await page.getByLabel('Counter prefix').fill('SN-')
   await page.getByText('Preview: SN-0001', { exact: true }).waitFor()
   await page.getByLabel('Counter prefix').fill('')
-  await section.screenshot({ path: 'docs/verification/0.3.0/data-source-counter.png' })
+  await section.screenshot({ path: 'scratch/verification/0.3.0/data-source-counter.png' })
 
   // A hand-written expression is reported as custom and left exactly as typed.
   await barcodeData.fill('SN-{serial}')
@@ -131,7 +131,7 @@ try {
     throw new Error(`A mixed expression was read as ${await dataSource.inputValue()}`)
   if ((await barcodeData.innerText()) !== 'SN-{serial}')
     throw new Error(`The custom expression was rewritten: ${await barcodeData.innerText()}`)
-  await section.screenshot({ path: 'docs/verification/0.3.0/data-source-custom.png' })
+  await section.screenshot({ path: 'scratch/verification/0.3.0/data-source-custom.png' })
 
   await dataSource.selectOption('field')
   await page.getByLabel('Spreadsheet column').fill('Asset')
@@ -139,7 +139,7 @@ try {
   if ((await barcodeData.innerText()) !== 'Column')
     throw new Error(`Binding a field did not replace the data: ${await barcodeData.innerText()}`)
   await page.getByText('Preview: A-17', { exact: true }).waitFor()
-  await section.screenshot({ path: 'docs/verification/0.3.0/data-source-field.png' })
+  await section.screenshot({ path: 'scratch/verification/0.3.0/data-source-field.png' })
 
   // Going back to fixed text unbinds, keeping the value that was on screen.
   await dataSource.selectOption('fixed')

@@ -201,6 +201,8 @@ export interface BarcodeObject extends LabelObjectBase {
   quietZoneMm: number
   showHumanReadable: boolean
   humanReadableFontSizePt: number
+  /** Optional caption shown beneath the bars; defaults to the encoded data. */
+  humanReadableText?: string
   /** Append a symbology-specific check digit when the data omits it. */
   addCheckDigit: boolean
   color: string

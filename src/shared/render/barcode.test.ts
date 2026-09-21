@@ -45,6 +45,14 @@ describe('barcode rendering', () => {
     expect(svg).toContain('fill="#ff0000"')
   })
 
+  it('renders a separately editable caption below the encoded barcode value', () => {
+    const captioned = barcodeSvg(
+      barcode({ symbology: 'code128', data: '0123456789', humanReadableText: 'Carton 42' })
+    )
+    const defaultCaption = barcodeSvg(barcode({ symbology: 'code128', data: '0123456789' }))
+    expect(captioned).not.toBe(defaultCaption)
+  })
+
   it('translates the named colours the schema allows into hex the encoder accepts', () => {
     expect(barcodeSvg(barcode({ symbology: 'code39', data: 'CODE39', color: 'black' }))).toContain(
       'stroke="#000000"'

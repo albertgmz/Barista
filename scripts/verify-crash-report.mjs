@@ -48,7 +48,7 @@ try {
   await page.getByRole('button', { name: 'View contents' }).click()
   await page.getByText(/database-info\.json/).waitFor()
   await page.waitForTimeout(250)
-  await page.screenshot({ path: 'docs/verification/0.4.0/crash-notice.png' })
+  await page.screenshot({ path: 'scratch/verification/0.4.0/crash-notice.png' })
   await page.getByRole('button', { name: 'Dismiss' }).click()
   const dismissed = await page.evaluate(() => window.barista.invoke('diagnostics:crashNotice'))
   if (dismissed) throw new Error('Dismissed crash notice would appear again.')

@@ -21,7 +21,7 @@ try {
   const report = page.getByRole('dialog', { name: 'Create Diagnostic Report' })
   await report.waitFor()
   await report.getByText(/never uploads or sends diagnostic information/i).waitFor()
-  await page.screenshot({ path: 'docs/verification/0.4.0/diagnostic-report.png' })
+  await page.screenshot({ path: 'scratch/verification/0.4.0/diagnostic-report.png' })
   await report
     .getByLabel('What were you doing when the problem happened?')
     .fill('Automated local verification')
@@ -29,7 +29,7 @@ try {
   await report.getByText(/Saved as Barista-diagnostic-/).waitFor({ timeout: 60_000 })
   await report.getByRole('button', { name: 'View contents' }).click()
   await report.getByText(/system-report\.json/).waitFor()
-  await page.screenshot({ path: 'docs/verification/0.4.0/diagnostic-contents.png' })
+  await page.screenshot({ path: 'scratch/verification/0.4.0/diagnostic-contents.png' })
   await report.getByRole('button', { name: 'Close' }).click()
 
   await page.getByRole('menuitem', { name: 'Help', exact: true }).click()
@@ -38,7 +38,7 @@ try {
   await logs.waitFor()
   await logs.getByText('app.start', { exact: true }).first().waitFor()
   await page.waitForTimeout(250)
-  await page.screenshot({ path: 'docs/verification/0.4.0/log-viewer.png' })
+  await page.screenshot({ path: 'scratch/verification/0.4.0/log-viewer.png' })
 
   const userData = await app.evaluate(({ app: electronApp }) => electronApp.getPath('userData'))
   const diagnosticsDir = join(userData, 'diagnostics')

@@ -6,7 +6,7 @@ import { createHash } from 'node:crypto'
 import * as fs from 'node:fs/promises'
 import * as path from 'node:path'
 
-const verification = path.resolve('docs/verification/0.3.0')
+const verification = path.resolve('scratch/verification/0.3.0')
 const library = path.join(verification, 'station-library')
 const workbookPath = path.join(verification, 'equipment-records.xlsx')
 const output = path.join(verification, 'station-three-records.pdf')

@@ -40,8 +40,8 @@ try {
     .first()
     .waitFor()
 
-  await fs.mkdir('docs/verification/0.3.0', { recursive: true })
-  await page.screenshot({ path: 'docs/verification/0.3.0/new-label-dialog.png' })
+  await fs.mkdir('scratch/verification/0.3.0', { recursive: true })
+  await page.screenshot({ path: 'scratch/verification/0.3.0/new-label-dialog.png' })
   await dialog.getByRole('button', { name: 'Create' }).click()
   await dialog.waitFor({ state: 'hidden' })
 

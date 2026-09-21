@@ -167,6 +167,15 @@
   flex-direction: column;
   background: var(--surface-canvas);
 }
+.canvas-context-anchor {
+  position: fixed;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  pointer-events: none;
+}
 .canvas-content {
   flex: 1;
   min-height: 0;

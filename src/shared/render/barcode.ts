@@ -24,6 +24,8 @@ export function barcodeSvg(o: Extract<LabelObject, { kind: 'barcode' | 'qrcode' 
           height: o.barHeightMm,
           includetext: o.showHumanReadable,
           textsize: o.humanReadableFontSizePt,
+          textxalign: 'center' as const,
+          ...(o.humanReadableText ? { alttext: o.humanReadableText } : {}),
           paddingwidth: o.quietZoneMm / o.moduleWidthMm,
           includecheck: checkDigit,
           includecheckintext: checkDigit,

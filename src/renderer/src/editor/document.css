@@ -388,16 +388,11 @@
   color: var(--text-secondary);
 }
 .variable-autocomplete {
-  position: absolute;
-  z-index: 20;
-  top: calc(100% + 3px);
-  right: 0;
-  left: 0;
+  position: fixed;
+  z-index: 1000;
   display: flex;
   box-sizing: border-box;
-  width: 100%;
   min-width: 0;
-  max-height: 220px;
   overflow: auto;
   flex-direction: column;
   padding: 4px;

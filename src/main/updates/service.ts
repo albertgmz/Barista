@@ -3,6 +3,7 @@ import { app, shell } from 'electron'
 import { autoUpdater } from 'electron-updater'
 import type { BrowserWindow } from 'electron'
 import type { AvailableUpdate, UpdateState } from '@shared/updates'
+import { toPlainReleaseNotes } from '@shared/releaseNotes'
 import { SettingsStoreFile } from '../storage/settings'
 import { sendTo } from '../ipc/typedIpc'
 import type { UpdateAdapter, UpdateAdapterEvents } from './controller'
@@ -19,12 +20,14 @@ interface UpdaterInfo {
 }
 
 function releaseNotes(info: UpdaterInfo): string | undefined {
-  if (typeof info.releaseNotes === 'string') return info.releaseNotes
+  if (typeof info.releaseNotes === 'string')
+    return toPlainReleaseNotes(info.releaseNotes) || undefined
   if (!Array.isArray(info.releaseNotes)) return undefined
   const notes = info.releaseNotes
     .map((item) => item.note)
     .filter((note): note is string => typeof note === 'string' && note.length > 0)
-  return notes.length > 0 ? notes.join('\n\n') : undefined
+  const plainText = toPlainReleaseNotes(notes.join('\n\n'))
+  return plainText || undefined
 }
 
 function availableUpdate(info: UpdaterInfo): AvailableUpdate {

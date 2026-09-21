@@ -1,5 +1,15 @@
 /* Copyright (C) 2026 Albert Gomez. SPDX-License-Identifier: GPL-3.0-only */
-import { useEffect, useMemo, useRef, useState, type JSX } from 'react'
+import {
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+  type JSX,
+  type RefObject
+} from 'react'
+import { createPortal } from 'react-dom'
 import { useId } from '@fluentui/react-components'
 import type { LabelVariable } from '@shared/template/types'
 import { evaluateVariables, templateSegments } from '@shared/variables'
@@ -64,6 +74,7 @@ export function TemplateField({
   const range = useRef<Range | null>(null)
   const lastLocalValue = useRef(value)
   const [open, setOpen] = useState(false)
+  const [anchor, setAnchor] = useState<DOMRect | null>(null)
   const [suggest, setSuggest] = useState<AutocompleteState>({ query: '', activeIndex: 0 })
   const listId = useId('variable-autocomplete-')
   const matches = matchingVariables(variables, suggest.query)
@@ -97,6 +108,21 @@ export function TemplateField({
     const option = listbox.current?.children[suggest.activeIndex]
     if (option instanceof HTMLElement) option.scrollIntoView({ block: 'nearest' })
   }, [open, suggest.activeIndex])
+
+  useLayoutEffect(() => {
+    if (!open || !editor.current) return
+    const updateAnchor = (): void => setAnchor(editor.current?.getBoundingClientRect() ?? null)
+    updateAnchor()
+    const observer = new ResizeObserver(updateAnchor)
+    observer.observe(editor.current)
+    window.addEventListener('resize', updateAnchor)
+    window.addEventListener('scroll', updateAnchor, true)
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', updateAnchor)
+      window.removeEventListener('scroll', updateAnchor, true)
+    }
+  }, [open])
 
   const emit = (next: string): void => {
     lastLocalValue.current = next
@@ -219,45 +245,92 @@ export function TemplateField({
             document.execCommand('insertText', false, event.clipboardData.getData('text/plain'))
           }}
         />
-        {open ? (
-          <span
-            ref={listbox}
-            id={listId}
-            className="variable-autocomplete"
-            role="listbox"
-            aria-label="Variable autocomplete"
-            onMouseDown={(event) => event.preventDefault()}
-          >
-            {matches.map((variable, index) => (
-              <button
-                key={variable.id}
-                id={`${listId}-${index}`}
-                type="button"
-                data-active={index === suggest.activeIndex}
-                onClick={() => void choose(index)}
-              >
-                <span className="variable-label">
-                  <span
-                    className="variable-swatch"
-                    style={variableTint(variable.name)}
-                    aria-hidden
-                  />
-                  {variable.name}
-                </span>
-                <small>{variable.kind}</small>
-              </button>
-            ))}
-            <button
-              id={`${listId}-${matches.length}`}
-              type="button"
-              data-active={matches.length === suggest.activeIndex}
-              onClick={() => void choose(matches.length)}
-            >
-              Create new variable…
-            </button>
-          </span>
-        ) : null}
+        {open && anchor
+          ? createPortal(
+              <Autocomplete
+                anchor={anchor}
+                id={listId}
+                listbox={listbox}
+                matches={matches}
+                activeIndex={suggest.activeIndex}
+                onChoose={choose}
+              />,
+              document.body
+            )
+          : null}
       </span>
     </label>
+  )
+}
+
+interface AutocompleteProps {
+  anchor: DOMRect
+  id: string
+  listbox: RefObject<HTMLSpanElement | null>
+  matches: readonly LabelVariable[]
+  activeIndex: number
+  onChoose: (index: number) => Promise<void>
+}
+
+/** A portal keeps the suggestion list above docked panels and any clipped ancestor. */
+function Autocomplete({
+  anchor,
+  id,
+  listbox,
+  matches,
+  activeIndex,
+  onChoose
+}: AutocompleteProps): JSX.Element {
+  const viewportPadding = 8
+  const width = Math.min(Math.max(320, anchor.width), window.innerWidth - viewportPadding * 2)
+  const availableBelow = window.innerHeight - anchor.bottom - viewportPadding
+  const maxHeight = Math.min(
+    220,
+    Math.max(96, availableBelow >= 120 ? availableBelow : anchor.top - viewportPadding)
+  )
+  const below = availableBelow >= 120 || anchor.top < maxHeight + viewportPadding
+  const style: CSSProperties = {
+    width,
+    maxHeight,
+    left: Math.max(
+      viewportPadding,
+      Math.min(anchor.left, window.innerWidth - width - viewportPadding)
+    ),
+    top: below ? anchor.bottom + 3 : Math.max(viewportPadding, anchor.top - maxHeight - 3)
+  }
+  return (
+    <span
+      ref={listbox}
+      id={id}
+      className="variable-autocomplete"
+      style={style}
+      role="listbox"
+      aria-label="Variable autocomplete"
+      onMouseDown={(event) => event.preventDefault()}
+    >
+      {matches.map((variable, index) => (
+        <button
+          key={variable.id}
+          id={`${id}-${index}`}
+          type="button"
+          data-active={index === activeIndex}
+          onClick={() => void onChoose(index)}
+        >
+          <span className="variable-label">
+            <span className="variable-swatch" style={variableTint(variable.name)} aria-hidden />
+            {variable.name}
+          </span>
+          <small>{variable.kind}</small>
+        </button>
+      ))}
+      <button
+        id={`${id}-${matches.length}`}
+        type="button"
+        data-active={matches.length === activeIndex}
+        onClick={() => void onChoose(matches.length)}
+      >
+        Create new variable…
+      </button>
+    </span>
   )
 }

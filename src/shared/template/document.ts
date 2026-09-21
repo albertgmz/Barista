@@ -94,6 +94,7 @@ export function createObject(kind: ObjectKind, xMm: number, yMm: number): LabelO
         quietZoneMm: 2.54,
         showHumanReadable: true,
         humanReadableFontSizePt: 8,
+        humanReadableText: '',
         addCheckDigit: true,
         color: '#000000'
       }

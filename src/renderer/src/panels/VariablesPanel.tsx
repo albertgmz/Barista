@@ -10,7 +10,12 @@ import {
   DialogTitle,
   Input
 } from '@fluentui/react-components'
-import { Add16Regular, BracesVariable24Regular, Delete16Regular } from '@fluentui/react-icons'
+import {
+  Add16Regular,
+  ArrowLeft16Regular,
+  BracesVariable24Regular,
+  Delete16Regular
+} from '@fluentui/react-icons'
 import type { LabelVariable, VariableKind } from '@shared/template/types'
 import { analyzeVariableUsage, evaluateVariables } from '@shared/variables'
 import { useDocumentStore } from '../store'
@@ -276,6 +281,13 @@ export function VariablesPanel(): JSX.Element {
       ) : null}
       {selected && (
         <>
+          <Button
+            icon={<ArrowLeft16Regular />}
+            appearance="subtle"
+            onClick={() => setSelectedId(null)}
+          >
+            Back to variables
+          </Button>
           {text('name', 'Name', selected.name)}
           <small>
             Insert as <code>{`{${selected.name}}`}</code> · Sample:{' '}

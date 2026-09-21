@@ -1,11 +1,12 @@
 /* Copyright (C) 2026 Albert Gomez. SPDX-License-Identifier: GPL-3.0-only */
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef } from 'react'
 import type { FunctionComponent, JSX } from 'react'
 import { makeStyles, tokens } from '@fluentui/react-components'
 import { DockviewReact, themeDark, themeLight } from 'dockview-react'
 import type { DockviewReadyEvent, IDockviewPanelProps } from 'dockview-react'
 import { useWorkspaceStore } from '../store/workspaceStore'
 import { PANEL_IDS, defaultWorkspace } from '@shared/workspace'
+import { clampPanelWidth } from '@shared/workspace'
 import type { DockviewApi, SerializedDockview } from 'dockview-react'
 import { useCommands } from '../commands/context'
 import { setDockApi } from './dockFocus'
@@ -53,10 +54,37 @@ const useStyles = makeStyles({
 export function PanelDock(): JSX.Element {
   const styles = useStyles()
   const isDark = useUiStore((state) => state.isDark)
+  const panelWidth = useWorkspaceStore((state) => state.layout.panelWidth)
+  const setPanelWidth = useWorkspaceStore((state) => state.setPanelWidth)
+  const root = useRef<HTMLDivElement>(null)
 
   const { registry } = useCommands()
   const cleanup = useRef<(() => void) | null>(null)
   useEffect(() => () => cleanup.current?.(), [])
+  useLayoutEffect(() => {
+    const host = root.current
+    if (!host) return
+    const fitTabs = (): void => {
+      const tabGroups = [...host.querySelectorAll<HTMLElement>('.dv-tabs-and-actions-container')]
+      const required = Math.max(
+        0,
+        ...tabGroups.map(
+          (group) =>
+            [...group.querySelectorAll<HTMLElement>('.dv-tab')].reduce(
+              (total, tab) => total + tab.getBoundingClientRect().width,
+              0
+            ) + 16
+        )
+      )
+      if (required <= panelWidth) return
+      const workspaceWidth = host.closest('.workspace')?.clientWidth
+      setPanelWidth(clampPanelWidth(required, workspaceWidth))
+    }
+    fitTabs()
+    const observer = new ResizeObserver(fitTabs)
+    observer.observe(host)
+    return () => observer.disconnect()
+  }, [panelWidth, setPanelWidth])
   const onReady = useCallback(
     (event: DockviewReadyEvent) => {
       const api: DockviewApi = event.api
@@ -139,7 +167,7 @@ export function PanelDock(): JSX.Element {
   )
 
   return (
-    <div className={styles.root}>
+    <div ref={root} className={styles.root}>
       <DockviewReact
         components={components}
         theme={isDark ? themeDark : themeLight}

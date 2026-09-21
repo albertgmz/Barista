@@ -40,7 +40,7 @@ try {
   await page.keyboard.press('Control+s')
   await page.waitForTimeout(300)
   await page.mouse.click(1050, 830)
-  await page.screenshot({ path: 'docs/verification/editor.png' })
+  await page.screenshot({ path: 'scratch/verification/editor.png' })
   await page.keyboard.press('Control+p')
   await page.getByLabel('Printer', { exact: true }).selectOption('Microsoft Print to PDF')
   await page.getByAltText('Print preview', { exact: true }).waitFor()
@@ -73,7 +73,7 @@ try {
         dialog.showSaveDialog = async () => ({ canceled: false, filePath: output })
       }, output)
 
-      await page.screenshot({ path: 'docs/verification/print-step.png' })
+      await page.screenshot({ path: 'scratch/verification/print-step.png' })
       await page.getByRole('button', { name: 'Print', exact: true }).click()
       await page
         .getByText('PDF saved at the requested paper size.', { exact: true })
@@ -110,10 +110,10 @@ try {
       console.log(JSON.stringify(result))
       if (!pass) throw new Error('PDF media size mismatch')
       if (name === '60x35' && mode === 'actual')
-        await page.screenshot({ path: 'docs/verification/print-dialog.png' })
+        await page.screenshot({ path: 'scratch/verification/print-dialog.png' })
     }
   }
-  await fs.writeFile('docs/verification/pdf-sizes.json', JSON.stringify(results, null, 2))
+  await fs.writeFile('scratch/verification/pdf-sizes.json', JSON.stringify(results, null, 2))
   await page.getByRole('button', { name: 'Cancel', exact: true }).click()
   const loaded = await page.evaluate(
     (labelPath) => window.barista.invoke('template:read', { path: labelPath }),

@@ -5,7 +5,7 @@ import { PDFDocument } from 'pdf-lib'
 import * as fs from 'node:fs/promises'
 import path from 'node:path'
 
-const output = path.resolve('docs/verification/0.3.0/gdi-print.pdf')
+const output = path.resolve('scratch/verification/0.3.0/gdi-print.pdf')
 await fs.rm(output, { force: true })
 const env = { ...process.env }
 delete env.ELECTRON_RUN_AS_NODE
@@ -40,7 +40,7 @@ try {
     dialog.showSaveDialog = async () => ({ canceled: false, filePath: target })
   }, output)
   await print.getByAltText('Print preview').waitFor()
-  await page.screenshot({ path: 'docs/verification/0.3.0/gdi-printing.png' })
+  await page.screenshot({ path: 'scratch/verification/0.3.0/gdi-printing.png' })
   await print.getByRole('button', { name: 'Print', exact: true }).click()
   await page.waitForFunction(
     () =>
@@ -58,7 +58,7 @@ try {
     heightMm = (pageSize.height * 25.4) / 72
   const exact = Math.abs(widthMm - 60) <= 0.2 && Math.abs(heightMm - 35) <= 0.2
   await fs.writeFile(
-    'docs/verification/0.3.0/gdi-result.json',
+    'scratch/verification/0.3.0/gdi-result.json',
     JSON.stringify(
       {
         printer: 'Microsoft Print to PDF',

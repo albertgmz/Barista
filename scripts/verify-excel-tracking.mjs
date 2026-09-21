@@ -10,7 +10,7 @@ import { createHash } from 'node:crypto'
 
 XLSX.set_fs(fsSync)
 
-const verification = path.resolve('docs/verification/0.3.0')
+const verification = path.resolve('scratch/verification/0.3.0')
 const workbookPath = path.join(verification, 'equipment-records.xlsx')
 const pdfPath = path.join(verification, 'excel-tracking-print.pdf')
 await fs.mkdir(verification, { recursive: true })

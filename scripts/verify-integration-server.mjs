@@ -15,10 +15,10 @@ const port = await new Promise((resolve, reject) => {
     server.close(() => resolve(address.port))
   })
 })
-const library = path.resolve('docs/verification/0.3.0/station-library')
+const library = path.resolve('scratch/verification/0.3.0/station-library')
 const barPath = path.join(library, 'approved-equipment.bar')
-const output = path.resolve('docs/verification/0.3.0/integration-curl-print.pdf')
-const phpOutput = path.resolve('docs/verification/0.3.0/integration-php-print.pdf')
+const output = path.resolve('scratch/verification/0.3.0/integration-curl-print.pdf')
+const phpOutput = path.resolve('scratch/verification/0.3.0/integration-php-print.pdf')
 const env = { ...process.env }
 delete env.ELECTRON_RUN_AS_NODE
 const app = await _electron.launch({ args: ['.'], env: { ...env, BARISTA_SPLASH_MIN_MS: '0' } })
@@ -194,7 +194,7 @@ try {
     .getByText(/verification-all/)
     .first()
     .waitFor()
-  await page.screenshot({ path: 'docs/verification/0.3.0/integration-server.png' })
+  await page.screenshot({ path: 'scratch/verification/0.3.0/integration-server.png' })
   await preferences.getByRole('button', { name: 'Close' }).click()
   await page.evaluate(
     async ({ readId, allId }) => {
