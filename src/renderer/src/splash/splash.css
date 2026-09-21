@@ -1,0 +1,148 @@
+/* Copyright (C) 2026 Albert Gomez. SPDX-License-Identifier: GPL-3.0-only */
+@font-face {
+  font-family: 'Inter';
+  src: url('../../../../resources/fonts/inter/Inter-Variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+  user-select: none;
+}
+
+body {
+  padding: 10px;
+}
+
+main {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #ffffff38;
+  border-radius: 18px;
+  color: #fff;
+  background: #075985 url('../../../../resources/splash/artwork.jpg') center / cover no-repeat;
+  box-shadow: 0 20px 58px #001321a6;
+}
+
+main::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background:
+    linear-gradient(180deg, #00111f0a 34%, #00111fe8 100%),
+    linear-gradient(90deg, #00111fa8 0%, #00111f21 58%, #00111f78 100%);
+}
+
+.identity,
+.startup,
+.credits {
+  position: absolute;
+  z-index: 1;
+}
+
+.identity {
+  bottom: 88px;
+  left: 42px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.identity img {
+  border-radius: 14px;
+  filter: drop-shadow(0 8px 20px #0009);
+}
+
+h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 680;
+  line-height: 0.95;
+  letter-spacing: -1.5px;
+  text-shadow: 0 2px 12px #00111fcc;
+}
+
+.identity p {
+  margin: 8px 0 0;
+  color: #d9f7ff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-shadow: 0 2px 8px #00111f;
+}
+
+.startup {
+  right: 300px;
+  bottom: 32px;
+  left: 42px;
+}
+
+.startup p {
+  margin: 0 0 9px;
+  color: #e7faff;
+  font-size: 12px;
+}
+
+progress {
+  display: block;
+  width: min(360px, 100%);
+  height: 3px;
+  border: 0;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 3px;
+  background: #ffffff38;
+}
+
+progress::-webkit-progress-value {
+  border-radius: 3px;
+  background: linear-gradient(90deg, #f8fafc, #67e8f9);
+  box-shadow: 0 0 12px #67e8f9;
+  transition: width 160ms ease;
+}
+
+.credits {
+  right: 34px;
+  bottom: 31px;
+  display: grid;
+  width: 235px;
+  gap: 3px;
+  padding-left: 18px;
+  border-left: 1px solid #ffffff4a;
+  color: #d6f4fa;
+  font-size: 9px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.credits strong {
+  margin-bottom: 2px;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  progress::-webkit-progress-value {
+    transition: none;
+  }
+}

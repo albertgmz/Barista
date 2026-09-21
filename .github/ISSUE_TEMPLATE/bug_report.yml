@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a reproducible problem in Barista
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Barista. Diagnostic reports stay on your computer until you
+        choose to attach one. Please review its contents before sharing.
+  - type: input
+    id: version
+    attributes:
+      label: Barista version
+      placeholder: 0.4.0 Espresso
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2, build 26100
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the result and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open…
+        2. Select…
+        3. Print…
+    validations:
+      required: true
+  - type: dropdown
+    id: diagnostic
+    attributes:
+      label: Diagnostic ZIP
+      description: Attach a report created with Help ▸ Create Diagnostic Report after submitting.
+      options:
+        - I will attach a reviewed diagnostic ZIP
+        - I cannot attach a diagnostic ZIP
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add screenshots or other details. Remove private label or production data first.

@@ -1,0 +1,24 @@
+# Normalize text while preserving Windows command files.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary resources and verification artifacts.
+*.bar binary
+*.exe binary
+*.dll binary
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.pdf binary
+*.ttf binary
+*.otf binary
+*.woff2 binary
+*.zip binary
+*.gz binary
+*.tgz binary
+*.xls binary
+*.xlsx binary

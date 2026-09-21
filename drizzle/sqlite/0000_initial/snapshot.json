@@ -1,0 +1,691 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "id": "d7888b91-3fa0-4aa3-b5a6-fc957f6cb46e",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "name": "counters",
+      "entityType": "tables"
+    },
+    {
+      "name": "database_settings",
+      "entityType": "tables"
+    },
+    {
+      "name": "print_history",
+      "entityType": "tables"
+    },
+    {
+      "name": "data_source_tracking",
+      "entityType": "tables"
+    },
+    {
+      "name": "printer_profiles",
+      "entityType": "tables"
+    },
+    {
+      "name": "prompt_values",
+      "entityType": "tables"
+    },
+    {
+      "name": "reservations",
+      "entityType": "tables"
+    },
+    {
+      "name": "schema_migrations",
+      "entityType": "tables"
+    },
+    {
+      "name": "template_library",
+      "entityType": "tables"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "counter_id",
+      "entityType": "columns",
+      "table": "counters"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "next_value",
+      "entityType": "columns",
+      "table": "counters"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "reset_key",
+      "entityType": "columns",
+      "table": "counters"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "setting_key",
+      "entityType": "columns",
+      "table": "database_settings"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "value_json",
+      "entityType": "columns",
+      "table": "database_settings"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "table": "database_settings"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "date",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "user_name",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "computer",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "template",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "printer",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "serial_range",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "serialized_labels",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "copies",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "result",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "error",
+      "entityType": "columns",
+      "table": "print_history"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "data_source_id",
+      "entityType": "columns",
+      "table": "data_source_tracking"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "record_key",
+      "entityType": "columns",
+      "table": "data_source_tracking"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "status",
+      "entityType": "columns",
+      "table": "data_source_tracking"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "last_print_date",
+      "entityType": "columns",
+      "table": "data_source_tracking"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "job_id",
+      "entityType": "columns",
+      "table": "data_source_tracking"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "serial_used",
+      "entityType": "columns",
+      "table": "data_source_tracking"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "row_hash",
+      "entityType": "columns",
+      "table": "data_source_tracking"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "void_reason",
+      "entityType": "columns",
+      "table": "data_source_tracking"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "table": "data_source_tracking"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "printer_id",
+      "entityType": "columns",
+      "table": "printer_profiles"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "settings_json",
+      "entityType": "columns",
+      "table": "printer_profiles"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "table": "printer_profiles"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "template_id",
+      "entityType": "columns",
+      "table": "prompt_values"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "values_json",
+      "entityType": "columns",
+      "table": "prompt_values"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "table": "prompt_values"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "reservations"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "counter_id",
+      "entityType": "columns",
+      "table": "reservations"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "first_value",
+      "entityType": "columns",
+      "table": "reservations"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "count",
+      "entityType": "columns",
+      "table": "reservations"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "step",
+      "entityType": "columns",
+      "table": "reservations"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "next_value",
+      "entityType": "columns",
+      "table": "reservations"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "status",
+      "entityType": "columns",
+      "table": "reservations"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "table": "reservations"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "version",
+      "entityType": "columns",
+      "table": "schema_migrations"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "name",
+      "entityType": "columns",
+      "table": "schema_migrations"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "applied_at",
+      "entityType": "columns",
+      "table": "schema_migrations"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "template_library"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "path",
+      "entityType": "columns",
+      "table": "template_library"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "title",
+      "entityType": "columns",
+      "table": "template_library"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "description",
+      "entityType": "columns",
+      "table": "template_library"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "tags_json",
+      "entityType": "columns",
+      "table": "template_library"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "status",
+      "entityType": "columns",
+      "table": "template_library"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "thumbnail_path",
+      "entityType": "columns",
+      "table": "template_library"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "modified_at",
+      "entityType": "columns",
+      "table": "template_library"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "indexed_at",
+      "entityType": "columns",
+      "table": "template_library"
+    },
+    {
+      "columns": [
+        "data_source_id",
+        "record_key"
+      ],
+      "nameExplicit": false,
+      "name": "data_source_tracking_pk",
+      "entityType": "pks",
+      "table": "data_source_tracking"
+    },
+    {
+      "columns": [
+        "counter_id"
+      ],
+      "nameExplicit": false,
+      "name": "counters_pk",
+      "table": "counters",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "setting_key"
+      ],
+      "nameExplicit": false,
+      "name": "database_settings_pk",
+      "table": "database_settings",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "print_history_pk",
+      "table": "print_history",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "printer_id"
+      ],
+      "nameExplicit": false,
+      "name": "printer_profiles_pk",
+      "table": "printer_profiles",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "template_id"
+      ],
+      "nameExplicit": false,
+      "name": "prompt_values_pk",
+      "table": "prompt_values",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "reservations_pk",
+      "table": "reservations",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "version"
+      ],
+      "nameExplicit": false,
+      "name": "schema_migrations_pk",
+      "table": "schema_migrations",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "template_library_pk",
+      "table": "template_library",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        {
+          "value": "date",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "name": "print_history_date",
+      "entityType": "indexes",
+      "table": "print_history"
+    },
+    {
+      "columns": [
+        {
+          "value": "counter_id",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "name": "reservations_counter_id",
+      "entityType": "indexes",
+      "table": "reservations"
+    },
+    {
+      "columns": [
+        {
+          "value": "path",
+          "isExpression": false
+        }
+      ],
+      "isUnique": true,
+      "where": null,
+      "origin": "manual",
+      "name": "template_library_path",
+      "entityType": "indexes",
+      "table": "template_library"
+    }
+  ],
+  "renames": []
+}

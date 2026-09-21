@@ -1,0 +1,1516 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1254"
+  height="1254"
+  viewBox="0 0 1254 1254"
+  role="img"
+  aria-labelledby="title description"
+>
+  <title id="title">Barista</title>
+  <desc id="description">
+    A scalable vector approximation of the supplied image, featuring an ivory
+    shirt, black bow tie, dark textured apron, brass hardware, and a QR-style
+    card in a leather-trimmed pocket. No embedded raster images.
+  </desc>
+
+  <defs>
+    <radialGradient id="background" cx="28%" cy="17%" r="91%">
+      <stop stop-color="#34312d"/>
+      <stop offset=".55" stop-color="#1c1c1b"/>
+      <stop offset="1" stop-color="#101111"/>
+    </radialGradient>
+
+    <radialGradient id="backdrop" cx="47%" cy="4%" r="88%">
+      <stop stop-color="#a4744c"/>
+      <stop offset=".42" stop-color="#5b3c26"/>
+      <stop offset="1" stop-color="#171513"/>
+    </radialGradient>
+
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2=".85">
+      <stop stop-color="#fffbee"/>
+      <stop offset=".35" stop-color="#f0e3ce"/>
+      <stop offset=".65" stop-color="#e7d7c0"/>
+      <stop offset="1" stop-color="#a59075"/>
+    </linearGradient>
+
+    <linearGradient id="leftSleeve" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#998775"/>
+      <stop offset=".18" stop-color="#f9efdd"/>
+      <stop offset=".65" stop-color="#e8d9c3"/>
+      <stop offset="1" stop-color="#b6a186"/>
+    </linearGradient>
+
+    <linearGradient id="rightSleeve" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#ad9679"/>
+      <stop offset=".55" stop-color="#f6ead7"/>
+      <stop offset=".85" stop-color="#e5d4bb"/>
+      <stop offset="1" stop-color="#9a846d"/>
+    </linearGradient>
+
+    <linearGradient id="neck" x1="0" y1="0" x2=".75" y2="1">
+      <stop stop-color="#89603d"/>
+      <stop offset=".5" stop-color="#67472e"/>
+      <stop offset="1" stop-color="#34251b"/>
+    </linearGradient>
+
+    <linearGradient id="collarLeft" x1="0" y1="0" x2=".9" y2="1">
+      <stop stop-color="#fffdf2"/>
+      <stop offset=".47" stop-color="#f9edd9"/>
+      <stop offset=".8" stop-color="#e5d5bd"/>
+      <stop offset="1" stop-color="#bba384"/>
+    </linearGradient>
+
+    <linearGradient id="collarRight" x1="1" y1="0" x2=".2" y2="1">
+      <stop stop-color="#fff9ea"/>
+      <stop offset=".5" stop-color="#efdfc6"/>
+      <stop offset="1" stop-color="#b39a79"/>
+    </linearGradient>
+
+    <linearGradient id="apron" x1=".15" y1="0" x2=".8" y2="1">
+      <stop stop-color="#35302a"/>
+      <stop offset=".27" stop-color="#2a2621"/>
+      <stop offset=".66" stop-color="#201d19"/>
+      <stop offset="1" stop-color="#100f0e"/>
+    </linearGradient>
+
+    <linearGradient id="bib" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#171613"/>
+      <stop offset=".16" stop-color="#342e26"/>
+      <stop offset=".48" stop-color="#29251f"/>
+      <stop offset="1" stop-color="#211d18"/>
+    </linearGradient>
+
+    <linearGradient id="leather" x1="0" y1="0" x2="1" y2=".4">
+      <stop stop-color="#171310"/>
+      <stop offset=".18" stop-color="#46362b"/>
+      <stop offset=".48" stop-color="#30271f"/>
+      <stop offset=".82" stop-color="#241c17"/>
+      <stop offset="1" stop-color="#110e0c"/>
+    </linearGradient>
+
+    <linearGradient id="rolledLeather" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#6a4b35"/>
+      <stop offset=".13" stop-color="#423023"/>
+      <stop offset=".49" stop-color="#302219"/>
+      <stop offset=".82" stop-color="#211812"/>
+      <stop offset="1" stop-color="#100e0c"/>
+    </linearGradient>
+
+    <linearGradient id="brass" x1="0" y1="0" x2="1" y2=".75">
+      <stop stop-color="#5b3a19"/>
+      <stop offset=".17" stop-color="#e1b772"/>
+      <stop offset=".32" stop-color="#a77534"/>
+      <stop offset=".55" stop-color="#4e3116"/>
+      <stop offset=".75" stop-color="#c99a52"/>
+      <stop offset="1" stop-color="#765022"/>
+    </linearGradient>
+
+    <radialGradient id="stud" cx="32%" cy="25%" r="80%">
+      <stop stop-color="#d7ad6c"/>
+      <stop offset=".45" stop-color="#b48848"/>
+      <stop offset=".8" stop-color="#92662e"/>
+      <stop offset="1" stop-color="#503416"/>
+    </radialGradient>
+
+    <linearGradient id="bowLeft" x1=".1" y1="0" x2=".9" y2=".7">
+      <stop stop-color="#302e2b"/>
+      <stop offset=".34" stop-color="#1a1917"/>
+      <stop offset=".65" stop-color="#090a09"/>
+      <stop offset="1" stop-color="#242320"/>
+    </linearGradient>
+
+    <linearGradient id="bowRight" x1="1" y1=".05" x2="0" y2=".75">
+      <stop stop-color="#2d2b28"/>
+      <stop offset=".4" stop-color="#171716"/>
+      <stop offset=".68" stop-color="#090909"/>
+      <stop offset="1" stop-color="#242320"/>
+    </linearGradient>
+
+    <linearGradient id="bowFold" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#494640" stop-opacity=".5"/>
+      <stop offset=".47" stop-color="#111110" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".9"/>
+    </linearGradient>
+
+    <linearGradient id="knot" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#121211"/>
+      <stop offset=".21" stop-color="#35322d"/>
+      <stop offset=".5" stop-color="#252320"/>
+      <stop offset=".77" stop-color="#1a1917"/>
+      <stop offset="1" stop-color="#080909"/>
+    </linearGradient>
+
+    <radialGradient id="button" cx="34%" cy="27%" r="75%">
+      <stop stop-color="#fff8e7"/>
+      <stop offset=".6" stop-color="#e5cfac"/>
+      <stop offset="1" stop-color="#b1946c"/>
+    </radialGradient>
+
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fffdf3"/>
+      <stop offset=".52" stop-color="#f1e8d9"/>
+      <stop offset="1" stop-color="#d4c6b2"/>
+    </linearGradient>
+
+    <linearGradient id="pocket" x1="0" y1="0" x2=".8" y2="1">
+      <stop stop-color="#332b22"/>
+      <stop offset=".4" stop-color="#26211b"/>
+      <stop offset="1" stop-color="#151410"/>
+    </linearGradient>
+
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#073038"/>
+      <stop offset=".5" stop-color="#145362"/>
+      <stop offset="1" stop-color="#072d35"/>
+    </linearGradient>
+
+    <radialGradient id="vignette" cx="49%" cy="36%" r="75%">
+      <stop offset=".45" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".58"/>
+    </radialGradient>
+
+    <pattern
+      id="weave"
+      width="5"
+      height="5"
+      patternUnits="userSpaceOnUse"
+      patternTransform="rotate(28)"
+    >
+      <path
+        d="M0 0H5M0 2.5H5"
+        stroke="#cfb38c"
+        stroke-opacity=".09"
+        stroke-width=".7"
+      />
+      <path
+        d="M0 0V5M2.5 0V5"
+        stroke="#060504"
+        stroke-opacity=".25"
+        stroke-width=".8"
+      />
+    </pattern>
+
+    <pattern
+      id="linen"
+      width="4"
+      height="4"
+      patternUnits="userSpaceOnUse"
+      patternTransform="rotate(32)"
+    >
+      <path
+        d="M0 0H4M0 2H4"
+        stroke="#fffdf4"
+        stroke-opacity=".17"
+        stroke-width=".7"
+      />
+      <path
+        d="M0 0V4M2 0V4"
+        stroke="#8c775a"
+        stroke-opacity=".08"
+        stroke-width=".6"
+      />
+    </pattern>
+
+    <filter
+      id="cloth"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      color-interpolation-filters="sRGB"
+    >
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency=".65"
+        numOctaves="3"
+        seed="12"
+        stitchTiles="stitch"
+        result="noise"
+      />
+      <feDiffuseLighting
+        in="noise"
+        surfaceScale="1.4"
+        diffuseConstant="1"
+        lighting-color="#fff"
+        result="light"
+      >
+        <feDistantLight azimuth="225" elevation="48"/>
+      </feDiffuseLighting>
+      <feComponentTransfer in="light" result="grain">
+        <feFuncR type="linear" slope=".55" intercept=".55"/>
+        <feFuncG type="linear" slope=".55" intercept=".55"/>
+        <feFuncB type="linear" slope=".55" intercept=".55"/>
+      </feComponentTransfer>
+      <feComposite
+        in="grain"
+        in2="SourceGraphic"
+        operator="in"
+        result="texture"
+      />
+      <feBlend in="SourceGraphic" in2="texture" mode="multiply"/>
+    </filter>
+
+    <filter
+      id="leatherTexture"
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      color-interpolation-filters="sRGB"
+    >
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency=".23 .42"
+        numOctaves="3"
+        seed="4"
+        result="noise"
+      />
+      <feDiffuseLighting
+        in="noise"
+        surfaceScale="1.8"
+        diffuseConstant=".85"
+        lighting-color="#fff"
+        result="light"
+      >
+        <feDistantLight azimuth="235" elevation="52"/>
+      </feDiffuseLighting>
+      <feComponentTransfer in="light" result="grain">
+        <feFuncR type="linear" slope=".55" intercept=".55"/>
+        <feFuncG type="linear" slope=".55" intercept=".55"/>
+        <feFuncB type="linear" slope=".55" intercept=".55"/>
+      </feComponentTransfer>
+      <feComposite
+        in="grain"
+        in2="SourceGraphic"
+        operator="in"
+        result="texture"
+      />
+      <feBlend in="SourceGraphic" in2="texture" mode="multiply"/>
+    </filter>
+
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="180%">
+      <feDropShadow
+        dx="4"
+        dy="8"
+        stdDeviation="7"
+        flood-color="#000"
+        flood-opacity=".65"
+      />
+    </filter>
+
+    <filter id="bowShadow" x="-15%" y="-25%" width="135%" height="160%">
+      <feDropShadow
+        dx="1"
+        dy="13"
+        stdDeviation="10"
+        flood-color="#24190e"
+        flood-opacity=".55"
+      />
+    </filter>
+
+    <filter id="smallShadow" x="-35%" y="-35%" width="180%" height="190%">
+      <feDropShadow
+        dx="1"
+        dy="4"
+        stdDeviation="3"
+        flood-color="#110d08"
+        flood-opacity=".65"
+      />
+    </filter>
+
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <clipPath id="iconClip">
+      <path d="
+        M373 52H880
+        C1084 52 1197 157 1197 352
+        V910
+        C1197 1088 1094 1178 911 1178
+        H345
+        C157 1178 58 1088 58 910
+        V348
+        C58 155 171 52 373 52Z
+      "/>
+    </clipPath>
+
+    <path id="shirtShape" d="
+      M368 52H877
+      C897 108 944 136 1005 164
+      L1197 249V1089L1095 1178H162L58 1089V246L250 157
+      C313 127 350 94 368 52Z
+    "/>
+
+    <path id="apronShape" d="
+      M180 507
+      C365 501 797 502 1016 500
+      C1052 531 1080 609 1095 694
+      L1169 1107
+      C1118 1159 1027 1178 911 1178
+      H345
+      C226 1178 137 1151 86 1096
+      C91 977 111 806 142 644
+      C152 581 165 529 180 507Z
+    "/>
+
+    <path id="leftBowShape" d="
+      M428 164
+      C482 180 535 199 579 223
+      C592 230 598 247 597 264
+      C597 290 580 310 560 324
+      C512 357 463 380 418 393
+      C410 396 405 391 403 383
+      C393 333 396 236 411 177
+      C413 166 417 160 428 164Z
+    "/>
+
+    <path id="rightBowShape" d="
+      M820 164
+      C769 178 711 199 665 224
+      C652 231 647 247 648 265
+      C648 289 660 309 681 324
+      C729 356 780 380 827 393
+      C836 396 842 390 844 380
+      C856 318 850 233 836 176
+      C833 166 830 161 820 164Z
+    "/>
+
+    <path id="pocketShape" d="
+      M727 704
+      Q877 739 1034 719
+      L1020 1043
+      Q876 1050 723 1042Z
+    "/>
+  </defs>
+
+  <rect width="1254" height="1254" fill="url(#background)"/>
+
+  <g clip-path="url(#iconClip)">
+    <rect
+      x="58"
+      y="52"
+      width="1139"
+      height="1126"
+      fill="url(#backdrop)"
+    />
+
+    <!-- Shirt and sleeves -->
+    <use href="#shirtShape" fill="url(#shirt)" filter="url(#cloth)"/>
+
+    <path
+      d="M58 248L283 157L239 436L145 722L97 1102L58 1089Z"
+      fill="url(#leftSleeve)"
+    />
+    <path
+      d="M967 145L1197 249V1089L1154 1095L1099 731L1030 413Z"
+      fill="url(#rightSleeve)"
+    />
+
+    <use href="#shirtShape" fill="url(#linen)"/>
+
+    <g fill="none" stroke-linecap="round">
+      <path
+        d="M78 272Q161 221 270 184M77 284Q167 235 240 211"
+        stroke="#b6a085"
+        stroke-width="5"
+        opacity=".22"
+      />
+      <path
+        d="M981 185Q1081 220 1180 269M1007 211Q1094 244 1183 286"
+        stroke="#a28a6b"
+        stroke-width="5"
+        opacity=".2"
+      />
+      <path
+        d="M78 394Q115 598 84 790M1175 400Q1148 592 1181 818"
+        stroke="#fffaec"
+        stroke-width="15"
+        opacity=".35"
+        filter="url(#blur)"
+      />
+    </g>
+
+    <path
+      d="
+        M400 52H853
+        C840 93 801 135 751 169
+        L671 223H579L497 169
+        C445 134 411 93 400 52Z
+      "
+      fill="url(#neck)"
+    />
+
+    <path
+      d="M568 283Q621 269 681 287L686 512H566Z"
+      fill="#eedfc9"
+      opacity=".7"
+    />
+    <path
+      d="M569 291L566 502M680 289L683 502"
+      fill="none"
+      stroke="#bba88d"
+      stroke-width="2"
+      opacity=".42"
+    />
+    <path
+      d="M576 295L573 502M675 293L678 502"
+      fill="none"
+      stroke="#fff7e7"
+      stroke-width="2"
+      opacity=".62"
+    />
+
+    <!-- Collar -->
+    <g filter="url(#smallShadow)">
+      <path
+        d="
+          M369 52H400
+          C421 105 466 130 509 156
+          C551 182 584 207 613 223
+          L569 274
+          C519 304 457 350 403 403
+          C358 343 336 253 341 169
+          C344 124 354 84 369 52Z
+        "
+        fill="url(#collarLeft)"
+      />
+      <path
+        d="
+          M846 52H877
+          C892 103 909 163 909 215
+          C909 286 884 350 849 402
+          C800 350 741 304 679 270
+          L631 224
+          C682 194 742 159 789 121
+          C816 99 837 73 846 52Z
+        "
+        fill="url(#collarRight)"
+      />
+    </g>
+
+    <g fill="none" stroke="#fff9ee" stroke-width="2" opacity=".55">
+      <path d="
+        M370 56
+        C348 115 339 166 346 224
+        C353 288 371 344 403 393
+      "/>
+      <path d="
+        M874 57
+        C891 112 904 167 904 221
+        C901 287 881 345 850 393
+      "/>
+    </g>
+
+    <path
+      d="
+        M379 64C395 123 496 167 591 227
+        M852 64C832 126 739 179 651 226
+      "
+      fill="none"
+      stroke="#b69e7b"
+      stroke-width="3"
+      opacity=".22"
+    />
+
+    <!-- Shirt button -->
+    <g filter="url(#smallShadow)">
+      <path
+        d="M624 435V446"
+        stroke="#c2ad8c"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
+      <circle cx="625" cy="465" r="24" fill="url(#button)"/>
+      <circle
+        cx="625"
+        cy="465"
+        r="19.3"
+        fill="none"
+        stroke="#fff7e6"
+        stroke-width="2.2"
+      />
+      <circle cx="625" cy="465" r="16" fill="#ead7b9"/>
+
+      <g fill="#9b7b54">
+        <ellipse cx="619" cy="459" rx="2.8" ry="3.5"/>
+        <ellipse cx="631" cy="460" rx="2.8" ry="3.5"/>
+        <ellipse cx="619" cy="470" rx="2.8" ry="3.5"/>
+        <ellipse cx="631" cy="471" rx="2.8" ry="3.5"/>
+      </g>
+
+      <path
+        d="M620 459L630 471M630 460L620 470"
+        stroke="#e4ceb0"
+        stroke-width="1.8"
+      />
+    </g>
+
+    <!-- Apron -->
+    <use href="#apronShape" fill="url(#apron)" filter="url(#cloth)"/>
+    <use href="#apronShape" fill="url(#weave)"/>
+
+    <g fill="none" stroke-linecap="round" filter="url(#blur)">
+      <path
+        d="M162 619Q102 891 106 1082"
+        stroke="#000"
+        stroke-width="25"
+        opacity=".33"
+      />
+      <path
+        d="M1081 648Q1118 854 1142 1097"
+        stroke="#000"
+        stroke-width="27"
+        opacity=".48"
+      />
+      <path
+        d="M224 634Q175 869 179 1125"
+        stroke="#6a5741"
+        stroke-width="16"
+        opacity=".12"
+      />
+      <path
+        d="M577 801Q506 1037 408 1175"
+        stroke="#080807"
+        stroke-width="25"
+        opacity=".17"
+      />
+    </g>
+
+    <path
+      d="M181 507Q617 501 1016 503L1053 599Q614 608 157 596Z"
+      fill="url(#bib)"
+      filter="url(#cloth)"
+    />
+    <path
+      d="M181 507Q617 501 1016 503L1053 599Q614 608 157 596Z"
+      fill="url(#weave)"
+    />
+    <path
+      d="M190 507Q621 501 1017 506"
+      fill="none"
+      stroke="#110f0d"
+      stroke-width="9"
+    />
+    <path
+      d="M195 505Q621 500 1017 504"
+      fill="none"
+      stroke="#7b654c"
+      stroke-width="1.8"
+      opacity=".65"
+    />
+    <path
+      d="M185 519Q620 528 1026 520M172 594Q621 605 1047 596"
+      fill="none"
+      stroke="#ac7c4d"
+      stroke-width="1.7"
+      stroke-dasharray="7 5"
+      stroke-linecap="round"
+      opacity=".72"
+    />
+    <path
+      d="M171 599Q621 610 1048 601"
+      fill="none"
+      stroke="#100e0c"
+      stroke-width="3"
+      opacity=".7"
+    />
+
+    <!-- Shoulder straps -->
+    <g filter="url(#shadow)">
+      <path
+        d="
+          M353 87
+          C308 133 281 194 253 270
+          C230 331 212 374 204 402
+          L285 424
+          C296 377 309 310 326 242
+          C340 183 347 128 353 87Z
+        "
+        fill="url(#leather)"
+        filter="url(#leatherTexture)"
+      />
+      <path
+        d="
+          M887 88
+          C934 137 967 203 995 275
+          C1019 334 1035 377 1046 409
+          L968 427
+          C950 376 937 307 920 244
+          C906 184 894 130 887 88Z
+        "
+        fill="url(#leather)"
+        filter="url(#leatherTexture)"
+      />
+    </g>
+
+    <g
+      fill="none"
+      stroke="#8d6748"
+      stroke-width="1.4"
+      stroke-dasharray="4 6"
+      opacity=".47"
+    >
+      <path d="
+        M343 113C300 178 261 278 218 400
+        M338 154C323 232 299 335 275 411
+      "/>
+      <path d="
+        M900 114C947 184 985 283 1032 405
+        M906 161C923 242 949 343 977 415
+      "/>
+    </g>
+
+    <!-- Brass buckles -->
+    <g transform="rotate(8 247 453)" filter="url(#smallShadow)">
+      <rect
+        x="186" y="414" width="119" height="76" rx="13"
+        fill="none" stroke="#21170e" stroke-width="15"
+      />
+      <rect
+        x="186" y="414" width="119" height="76" rx="13"
+        fill="none" stroke="url(#brass)" stroke-width="10"
+      />
+      <path
+        d="M193 418Q190 418 190 427V474Q190 483 199 485M297 422V474"
+        fill="none"
+        stroke="#f0c68a"
+        stroke-width="2"
+        opacity=".76"
+      />
+    </g>
+
+    <g transform="rotate(-7 1000 449)" filter="url(#smallShadow)">
+      <rect
+        x="940" y="412" width="119" height="76" rx="13"
+        fill="none" stroke="#21170e" stroke-width="15"
+      />
+      <rect
+        x="940" y="412" width="119" height="76" rx="13"
+        fill="none" stroke="url(#brass)" stroke-width="10"
+      />
+      <path
+        d="M947 417Q945 417 945 426V473Q945 481 952 483M1051 420V473"
+        fill="none"
+        stroke="#f0c68a"
+        stroke-width="2"
+        opacity=".7"
+      />
+    </g>
+
+    <!-- Strap loops -->
+    <g filter="url(#smallShadow)">
+      <path
+        d="
+          M209 397L288 395
+          Q301 396 302 409L298 431
+          Q295 444 281 444L208 443
+          Q195 441 197 427L200 410
+          Q201 399 209 397Z
+        "
+        fill="url(#rolledLeather)"
+        filter="url(#leatherTexture)"
+      />
+      <path
+        d="
+          M956 394L1029 397
+          Q1040 398 1043 410L1047 429
+          Q1049 442 1036 444L965 443
+          Q951 442 948 429L944 410
+          Q943 397 956 394Z
+        "
+        fill="url(#rolledLeather)"
+        filter="url(#leatherTexture)"
+      />
+    </g>
+
+    <path
+      d="M207 401L289 399M954 398L1030 401"
+      fill="none"
+      stroke="#927253"
+      stroke-width="1.4"
+      opacity=".45"
+    />
+
+    <!-- Leather fastening tabs -->
+    <g filter="url(#shadow)">
+      <path
+        d="
+          M196 457L281 465L269 594
+          Q268 607 255 607L185 598
+          Q174 597 176 584Z
+        "
+        fill="url(#leather)"
+        stroke="#120f0c"
+        stroke-width="3"
+        filter="url(#leatherTexture)"
+      />
+      <path
+        d="
+          M962 454L1047 453L1065 592
+          Q1066 605 1053 607L981 606
+          Q970 605 969 593Z
+        "
+        fill="url(#leather)"
+        stroke="#120f0c"
+        stroke-width="3"
+        filter="url(#leatherTexture)"
+      />
+    </g>
+
+    <g
+      fill="none"
+      stroke="#97724f"
+      stroke-width="1.5"
+      stroke-dasharray="4 4"
+      opacity=".63"
+    >
+      <path d="M203 470L269 476L257 594L187 586Z"/>
+      <path d="M975 466L1036 465L1053 594L982 594Z"/>
+    </g>
+
+    <!-- Brass studs -->
+    <g filter="url(#smallShadow)">
+      <circle cx="227" cy="541" r="27" fill="#24180d"/>
+      <circle
+        cx="227" cy="538" r="24.6"
+        fill="url(#stud)" stroke="#dfb77a" stroke-width="1.8"
+      />
+      <circle
+        cx="227" cy="538" r="21.5"
+        fill="none" stroke="#9b733b" stroke-width=".8"
+      />
+      <path
+        d="M207 537A21 21 0 0 1 235 518"
+        fill="none"
+        stroke="#ecd19a"
+        stroke-width="1.2"
+        opacity=".57"
+      />
+
+      <circle cx="1016" cy="542" r="27" fill="#24180d"/>
+      <circle
+        cx="1016" cy="539" r="24.6"
+        fill="url(#stud)" stroke="#c89a56" stroke-width="1.8"
+      />
+      <circle
+        cx="1016" cy="539" r="21.5"
+        fill="none" stroke="#9b733b" stroke-width=".8"
+      />
+      <path
+        d="M996 539A21 21 0 0 1 1024 519"
+        fill="none"
+        stroke="#edc98b"
+        stroke-width="1.2"
+        opacity=".5"
+      />
+    </g>
+
+    <!-- Plain black bow tie -->
+    <g filter="url(#bowShadow)">
+      <use
+        href="#leftBowShape"
+        fill="url(#bowLeft)"
+        stroke="#100f0e"
+        stroke-width="1.5"
+        filter="url(#cloth)"
+      />
+      <use
+        href="#rightBowShape"
+        fill="url(#bowRight)"
+        stroke="#100f0e"
+        stroke-width="1.5"
+        filter="url(#cloth)"
+      />
+
+      <use href="#leftBowShape" fill="url(#weave)" opacity=".6"/>
+      <use href="#rightBowShape" fill="url(#weave)" opacity=".6"/>
+
+      <path
+        d="
+          M422 180
+          C470 204 525 228 580 242
+          C525 234 468 257 406 284
+          C415 248 419 212 422 180Z
+        "
+        fill="url(#bowFold)"
+      />
+      <path
+        d="
+          M409 371
+          C465 350 518 302 579 278
+          L581 303
+          C529 338 472 373 418 389Z
+        "
+        fill="url(#bowFold)"
+      />
+      <path
+        d="
+          M824 180
+          C776 205 717 228 664 242
+          C723 237 779 258 845 286
+          C839 247 833 210 824 180Z
+        "
+        fill="url(#bowFold)"
+      />
+      <path
+        d="
+          M838 372
+          C780 347 726 302 664 278
+          L665 304
+          C718 340 775 376 829 390Z
+        "
+        fill="url(#bowFold)"
+      />
+
+      <g fill="none" stroke-linecap="round">
+        <path
+          d="M418 276Q496 276 575 260M673 260Q755 277 841 278"
+          stroke="#000"
+          stroke-width="10"
+          opacity=".42"
+        />
+        <path
+          d="M420 269Q499 267 574 255M675 255Q758 267 838 271"
+          stroke="#656058"
+          stroke-width="1.6"
+          opacity=".18"
+        />
+        <path
+          d="M420 168Q493 187 568 222M681 222Q760 187 821 168"
+          stroke="#686158"
+          stroke-width="1.3"
+          opacity=".48"
+        />
+        <path
+          d="M414 386Q495 360 571 309M675 309Q749 359 830 386"
+          stroke="#48443d"
+          stroke-width="1.3"
+          opacity=".52"
+        />
+      </g>
+
+      <path
+        d="
+          M585 223
+          Q622 228 657 223
+          Q667 222 668 236
+          L666 300
+          Q666 314 653 315
+          L586 315
+          Q575 312 575 300
+          L577 238
+          Q577 225 585 223Z
+        "
+        fill="url(#knot)"
+        stroke="#131211"
+        stroke-width="1.7"
+        filter="url(#cloth)"
+      />
+
+      <g fill="none" stroke-width="1">
+        <path
+          d="
+            M589 230Q585 267 590 308
+            M600 230Q597 269 601 309
+            M618 232V308
+            M640 232Q638 270 641 309
+            M652 230Q655 273 651 307
+          "
+          stroke="#777065"
+          opacity=".18"
+        />
+        <path
+          d="
+            M593 231Q590 268 594 309
+            M610 230L609 309
+            M646 231Q648 268 645 309
+            M660 237L658 302
+          "
+          stroke="#050606"
+          opacity=".47"
+        />
+      </g>
+
+      <path
+        d="M585 224Q621 229 658 224"
+        fill="none"
+        stroke="#70665a"
+        stroke-width="1.3"
+        opacity=".4"
+      />
+    </g>
+
+
+    <!-- Pocket card -->
+    <g filter="url(#shadow)">
+      <path
+        d="
+          M817 575L998 603
+          Q1015 606 1012 623
+          L982 822L771 791L794 594
+          Q797 572 817 575Z
+        "
+        fill="url(#paper)"
+        stroke="#fff9ed"
+        stroke-width="1.6"
+      />
+    </g>
+
+    <!-- QR-style motif: the intended repository target is stored here for source inspection.
+         Repository target: https://github.com/albertgmz/Barista
+         The visible pattern is intentionally decorative and not meant to be machine-scannable. -->
+    <g
+      id="repo-qr"
+      transform="translate(818 594) translate(76.88 74.88) rotate(8.8) scale(1.04) translate(-76.88 -74.88)"
+      fill="#141412"
+      data-repository="https://github.com/albertgmz/Barista"
+      aria-label="Decorative QR-style motif referencing the Barista repository"
+    >
+      <metadata>Repository target: https://github.com/albertgmz/Barista</metadata>
+      <rect x="8.00" y="6.00" width="4.75" height="4.75"/>
+      <rect x="12.75" y="6.00" width="4.75" height="4.75"/>
+      <rect x="17.50" y="6.00" width="4.75" height="4.75"/>
+      <rect x="22.25" y="6.00" width="4.75" height="4.75"/>
+      <rect x="27.00" y="6.00" width="4.75" height="4.75"/>
+      <rect x="31.75" y="6.00" width="4.75" height="4.75"/>
+      <rect x="36.50" y="6.00" width="4.75" height="4.75"/>
+      <rect x="46.00" y="6.00" width="4.75" height="4.75"/>
+      <rect x="50.75" y="6.00" width="4.75" height="4.75"/>
+      <rect x="65.00" y="6.00" width="4.75" height="4.75"/>
+      <rect x="69.75" y="6.00" width="4.75" height="4.75"/>
+      <rect x="74.50" y="6.00" width="4.75" height="4.75"/>
+      <rect x="84.00" y="6.00" width="4.75" height="4.75"/>
+      <rect x="93.50" y="6.00" width="4.75" height="4.75"/>
+      <rect x="98.25" y="6.00" width="4.75" height="4.75"/>
+      <rect x="112.50" y="6.00" width="4.75" height="4.75"/>
+      <rect x="117.25" y="6.00" width="4.75" height="4.75"/>
+      <rect x="122.00" y="6.00" width="4.75" height="4.75"/>
+      <rect x="126.75" y="6.00" width="4.75" height="4.75"/>
+      <rect x="131.50" y="6.00" width="4.75" height="4.75"/>
+      <rect x="136.25" y="6.00" width="4.75" height="4.75"/>
+      <rect x="141.00" y="6.00" width="4.75" height="4.75"/>
+      <rect x="8.00" y="10.75" width="4.75" height="4.75"/>
+      <rect x="36.50" y="10.75" width="4.75" height="4.75"/>
+      <rect x="50.75" y="10.75" width="4.75" height="4.75"/>
+      <rect x="55.50" y="10.75" width="4.75" height="4.75"/>
+      <rect x="60.25" y="10.75" width="4.75" height="4.75"/>
+      <rect x="65.00" y="10.75" width="4.75" height="4.75"/>
+      <rect x="74.50" y="10.75" width="4.75" height="4.75"/>
+      <rect x="79.25" y="10.75" width="4.75" height="4.75"/>
+      <rect x="84.00" y="10.75" width="4.75" height="4.75"/>
+      <rect x="88.75" y="10.75" width="4.75" height="4.75"/>
+      <rect x="93.50" y="10.75" width="4.75" height="4.75"/>
+      <rect x="98.25" y="10.75" width="4.75" height="4.75"/>
+      <rect x="112.50" y="10.75" width="4.75" height="4.75"/>
+      <rect x="141.00" y="10.75" width="4.75" height="4.75"/>
+      <rect x="8.00" y="15.50" width="4.75" height="4.75"/>
+      <rect x="17.50" y="15.50" width="4.75" height="4.75"/>
+      <rect x="22.25" y="15.50" width="4.75" height="4.75"/>
+      <rect x="27.00" y="15.50" width="4.75" height="4.75"/>
+      <rect x="36.50" y="15.50" width="4.75" height="4.75"/>
+      <rect x="46.00" y="15.50" width="4.75" height="4.75"/>
+      <rect x="50.75" y="15.50" width="4.75" height="4.75"/>
+      <rect x="65.00" y="15.50" width="4.75" height="4.75"/>
+      <rect x="69.75" y="15.50" width="4.75" height="4.75"/>
+      <rect x="74.50" y="15.50" width="4.75" height="4.75"/>
+      <rect x="84.00" y="15.50" width="4.75" height="4.75"/>
+      <rect x="98.25" y="15.50" width="4.75" height="4.75"/>
+      <rect x="103.00" y="15.50" width="4.75" height="4.75"/>
+      <rect x="112.50" y="15.50" width="4.75" height="4.75"/>
+      <rect x="122.00" y="15.50" width="4.75" height="4.75"/>
+      <rect x="126.75" y="15.50" width="4.75" height="4.75"/>
+      <rect x="131.50" y="15.50" width="4.75" height="4.75"/>
+      <rect x="141.00" y="15.50" width="4.75" height="4.75"/>
+      <rect x="8.00" y="20.25" width="4.75" height="4.75"/>
+      <rect x="17.50" y="20.25" width="4.75" height="4.75"/>
+      <rect x="22.25" y="20.25" width="4.75" height="4.75"/>
+      <rect x="27.00" y="20.25" width="4.75" height="4.75"/>
+      <rect x="36.50" y="20.25" width="4.75" height="4.75"/>
+      <rect x="46.00" y="20.25" width="4.75" height="4.75"/>
+      <rect x="69.75" y="20.25" width="4.75" height="4.75"/>
+      <rect x="74.50" y="20.25" width="4.75" height="4.75"/>
+      <rect x="79.25" y="20.25" width="4.75" height="4.75"/>
+      <rect x="93.50" y="20.25" width="4.75" height="4.75"/>
+      <rect x="98.25" y="20.25" width="4.75" height="4.75"/>
+      <rect x="112.50" y="20.25" width="4.75" height="4.75"/>
+      <rect x="122.00" y="20.25" width="4.75" height="4.75"/>
+      <rect x="126.75" y="20.25" width="4.75" height="4.75"/>
+      <rect x="131.50" y="20.25" width="4.75" height="4.75"/>
+      <rect x="141.00" y="20.25" width="4.75" height="4.75"/>
+      <rect x="8.00" y="25.00" width="4.75" height="4.75"/>
+      <rect x="17.50" y="25.00" width="4.75" height="4.75"/>
+      <rect x="22.25" y="25.00" width="4.75" height="4.75"/>
+      <rect x="27.00" y="25.00" width="4.75" height="4.75"/>
+      <rect x="36.50" y="25.00" width="4.75" height="4.75"/>
+      <rect x="55.50" y="25.00" width="4.75" height="4.75"/>
+      <rect x="74.50" y="25.00" width="4.75" height="4.75"/>
+      <rect x="79.25" y="25.00" width="4.75" height="4.75"/>
+      <rect x="98.25" y="25.00" width="4.75" height="4.75"/>
+      <rect x="112.50" y="25.00" width="4.75" height="4.75"/>
+      <rect x="122.00" y="25.00" width="4.75" height="4.75"/>
+      <rect x="126.75" y="25.00" width="4.75" height="4.75"/>
+      <rect x="131.50" y="25.00" width="4.75" height="4.75"/>
+      <rect x="141.00" y="25.00" width="4.75" height="4.75"/>
+      <rect x="8.00" y="29.75" width="4.75" height="4.75"/>
+      <rect x="36.50" y="29.75" width="4.75" height="4.75"/>
+      <rect x="46.00" y="29.75" width="4.75" height="4.75"/>
+      <rect x="55.50" y="29.75" width="4.75" height="4.75"/>
+      <rect x="65.00" y="29.75" width="4.75" height="4.75"/>
+      <rect x="69.75" y="29.75" width="4.75" height="4.75"/>
+      <rect x="79.25" y="29.75" width="4.75" height="4.75"/>
+      <rect x="98.25" y="29.75" width="4.75" height="4.75"/>
+      <rect x="112.50" y="29.75" width="4.75" height="4.75"/>
+      <rect x="141.00" y="29.75" width="4.75" height="4.75"/>
+      <rect x="8.00" y="34.50" width="4.75" height="4.75"/>
+      <rect x="12.75" y="34.50" width="4.75" height="4.75"/>
+      <rect x="17.50" y="34.50" width="4.75" height="4.75"/>
+      <rect x="22.25" y="34.50" width="4.75" height="4.75"/>
+      <rect x="27.00" y="34.50" width="4.75" height="4.75"/>
+      <rect x="31.75" y="34.50" width="4.75" height="4.75"/>
+      <rect x="36.50" y="34.50" width="4.75" height="4.75"/>
+      <rect x="46.00" y="34.50" width="4.75" height="4.75"/>
+      <rect x="55.50" y="34.50" width="4.75" height="4.75"/>
+      <rect x="65.00" y="34.50" width="4.75" height="4.75"/>
+      <rect x="74.50" y="34.50" width="4.75" height="4.75"/>
+      <rect x="84.00" y="34.50" width="4.75" height="4.75"/>
+      <rect x="93.50" y="34.50" width="4.75" height="4.75"/>
+      <rect x="103.00" y="34.50" width="4.75" height="4.75"/>
+      <rect x="112.50" y="34.50" width="4.75" height="4.75"/>
+      <rect x="117.25" y="34.50" width="4.75" height="4.75"/>
+      <rect x="122.00" y="34.50" width="4.75" height="4.75"/>
+      <rect x="126.75" y="34.50" width="4.75" height="4.75"/>
+      <rect x="131.50" y="34.50" width="4.75" height="4.75"/>
+      <rect x="136.25" y="34.50" width="4.75" height="4.75"/>
+      <rect x="141.00" y="34.50" width="4.75" height="4.75"/>
+      <rect x="46.00" y="39.25" width="4.75" height="4.75"/>
+      <rect x="65.00" y="39.25" width="4.75" height="4.75"/>
+      <rect x="69.75" y="39.25" width="4.75" height="4.75"/>
+      <rect x="74.50" y="39.25" width="4.75" height="4.75"/>
+      <rect x="79.25" y="39.25" width="4.75" height="4.75"/>
+      <rect x="84.00" y="39.25" width="4.75" height="4.75"/>
+      <rect x="88.75" y="39.25" width="4.75" height="4.75"/>
+      <rect x="98.25" y="39.25" width="4.75" height="4.75"/>
+      <rect x="103.00" y="39.25" width="4.75" height="4.75"/>
+      <rect x="8.00" y="44.00" width="4.75" height="4.75"/>
+      <rect x="22.25" y="44.00" width="4.75" height="4.75"/>
+      <rect x="31.75" y="44.00" width="4.75" height="4.75"/>
+      <rect x="36.50" y="44.00" width="4.75" height="4.75"/>
+      <rect x="41.25" y="44.00" width="4.75" height="4.75"/>
+      <rect x="46.00" y="44.00" width="4.75" height="4.75"/>
+      <rect x="55.50" y="44.00" width="4.75" height="4.75"/>
+      <rect x="60.25" y="44.00" width="4.75" height="4.75"/>
+      <rect x="74.50" y="44.00" width="4.75" height="4.75"/>
+      <rect x="88.75" y="44.00" width="4.75" height="4.75"/>
+      <rect x="98.25" y="44.00" width="4.75" height="4.75"/>
+      <rect x="103.00" y="44.00" width="4.75" height="4.75"/>
+      <rect x="117.25" y="44.00" width="4.75" height="4.75"/>
+      <rect x="126.75" y="44.00" width="4.75" height="4.75"/>
+      <rect x="131.50" y="44.00" width="4.75" height="4.75"/>
+      <rect x="141.00" y="44.00" width="4.75" height="4.75"/>
+      <rect x="12.75" y="48.75" width="4.75" height="4.75"/>
+      <rect x="22.25" y="48.75" width="4.75" height="4.75"/>
+      <rect x="27.00" y="48.75" width="4.75" height="4.75"/>
+      <rect x="41.25" y="48.75" width="4.75" height="4.75"/>
+      <rect x="55.50" y="48.75" width="4.75" height="4.75"/>
+      <rect x="74.50" y="48.75" width="4.75" height="4.75"/>
+      <rect x="84.00" y="48.75" width="4.75" height="4.75"/>
+      <rect x="88.75" y="48.75" width="4.75" height="4.75"/>
+      <rect x="93.50" y="48.75" width="4.75" height="4.75"/>
+      <rect x="103.00" y="48.75" width="4.75" height="4.75"/>
+      <rect x="112.50" y="48.75" width="4.75" height="4.75"/>
+      <rect x="126.75" y="48.75" width="4.75" height="4.75"/>
+      <rect x="141.00" y="48.75" width="4.75" height="4.75"/>
+      <rect x="12.75" y="53.50" width="4.75" height="4.75"/>
+      <rect x="17.50" y="53.50" width="4.75" height="4.75"/>
+      <rect x="22.25" y="53.50" width="4.75" height="4.75"/>
+      <rect x="27.00" y="53.50" width="4.75" height="4.75"/>
+      <rect x="36.50" y="53.50" width="4.75" height="4.75"/>
+      <rect x="60.25" y="53.50" width="4.75" height="4.75"/>
+      <rect x="65.00" y="53.50" width="4.75" height="4.75"/>
+      <rect x="69.75" y="53.50" width="4.75" height="4.75"/>
+      <rect x="107.75" y="53.50" width="4.75" height="4.75"/>
+      <rect x="112.50" y="53.50" width="4.75" height="4.75"/>
+      <rect x="117.25" y="53.50" width="4.75" height="4.75"/>
+      <rect x="122.00" y="53.50" width="4.75" height="4.75"/>
+      <rect x="131.50" y="53.50" width="4.75" height="4.75"/>
+      <rect x="136.25" y="53.50" width="4.75" height="4.75"/>
+      <rect x="141.00" y="53.50" width="4.75" height="4.75"/>
+      <rect x="12.75" y="58.25" width="4.75" height="4.75"/>
+      <rect x="22.25" y="58.25" width="4.75" height="4.75"/>
+      <rect x="27.00" y="58.25" width="4.75" height="4.75"/>
+      <rect x="41.25" y="58.25" width="4.75" height="4.75"/>
+      <rect x="46.00" y="58.25" width="4.75" height="4.75"/>
+      <rect x="50.75" y="58.25" width="4.75" height="4.75"/>
+      <rect x="55.50" y="58.25" width="4.75" height="4.75"/>
+      <rect x="69.75" y="58.25" width="4.75" height="4.75"/>
+      <rect x="74.50" y="58.25" width="4.75" height="4.75"/>
+      <rect x="88.75" y="58.25" width="4.75" height="4.75"/>
+      <rect x="98.25" y="58.25" width="4.75" height="4.75"/>
+      <rect x="117.25" y="58.25" width="4.75" height="4.75"/>
+      <rect x="122.00" y="58.25" width="4.75" height="4.75"/>
+      <rect x="136.25" y="58.25" width="4.75" height="4.75"/>
+      <rect x="12.75" y="63.00" width="4.75" height="4.75"/>
+      <rect x="27.00" y="63.00" width="4.75" height="4.75"/>
+      <rect x="36.50" y="63.00" width="4.75" height="4.75"/>
+      <rect x="41.25" y="63.00" width="4.75" height="4.75"/>
+      <rect x="46.00" y="63.00" width="4.75" height="4.75"/>
+      <rect x="55.50" y="63.00" width="4.75" height="4.75"/>
+      <rect x="60.25" y="63.00" width="4.75" height="4.75"/>
+      <rect x="65.00" y="63.00" width="4.75" height="4.75"/>
+      <rect x="79.25" y="63.00" width="4.75" height="4.75"/>
+      <rect x="84.00" y="63.00" width="4.75" height="4.75"/>
+      <rect x="88.75" y="63.00" width="4.75" height="4.75"/>
+      <rect x="103.00" y="63.00" width="4.75" height="4.75"/>
+      <rect x="107.75" y="63.00" width="4.75" height="4.75"/>
+      <rect x="112.50" y="63.00" width="4.75" height="4.75"/>
+      <rect x="122.00" y="63.00" width="4.75" height="4.75"/>
+      <rect x="126.75" y="63.00" width="4.75" height="4.75"/>
+      <rect x="136.25" y="63.00" width="4.75" height="4.75"/>
+      <rect x="141.00" y="63.00" width="4.75" height="4.75"/>
+      <rect x="17.50" y="67.75" width="4.75" height="4.75"/>
+      <rect x="31.75" y="67.75" width="4.75" height="4.75"/>
+      <rect x="41.25" y="67.75" width="4.75" height="4.75"/>
+      <rect x="46.00" y="67.75" width="4.75" height="4.75"/>
+      <rect x="50.75" y="67.75" width="4.75" height="4.75"/>
+      <rect x="60.25" y="67.75" width="4.75" height="4.75"/>
+      <rect x="65.00" y="67.75" width="4.75" height="4.75"/>
+      <rect x="69.75" y="67.75" width="4.75" height="4.75"/>
+      <rect x="84.00" y="67.75" width="4.75" height="4.75"/>
+      <rect x="103.00" y="67.75" width="4.75" height="4.75"/>
+      <rect x="107.75" y="67.75" width="4.75" height="4.75"/>
+      <rect x="112.50" y="67.75" width="4.75" height="4.75"/>
+      <rect x="126.75" y="67.75" width="4.75" height="4.75"/>
+      <rect x="141.00" y="67.75" width="4.75" height="4.75"/>
+      <rect x="12.75" y="72.50" width="4.75" height="4.75"/>
+      <rect x="22.25" y="72.50" width="4.75" height="4.75"/>
+      <rect x="36.50" y="72.50" width="4.75" height="4.75"/>
+      <rect x="41.25" y="72.50" width="4.75" height="4.75"/>
+      <rect x="46.00" y="72.50" width="4.75" height="4.75"/>
+      <rect x="50.75" y="72.50" width="4.75" height="4.75"/>
+      <rect x="60.25" y="72.50" width="4.75" height="4.75"/>
+      <rect x="74.50" y="72.50" width="4.75" height="4.75"/>
+      <rect x="88.75" y="72.50" width="4.75" height="4.75"/>
+      <rect x="103.00" y="72.50" width="4.75" height="4.75"/>
+      <rect x="112.50" y="72.50" width="4.75" height="4.75"/>
+      <rect x="122.00" y="72.50" width="4.75" height="4.75"/>
+      <rect x="136.25" y="72.50" width="4.75" height="4.75"/>
+      <rect x="141.00" y="72.50" width="4.75" height="4.75"/>
+      <rect x="8.00" y="77.25" width="4.75" height="4.75"/>
+      <rect x="12.75" y="77.25" width="4.75" height="4.75"/>
+      <rect x="27.00" y="77.25" width="4.75" height="4.75"/>
+      <rect x="41.25" y="77.25" width="4.75" height="4.75"/>
+      <rect x="46.00" y="77.25" width="4.75" height="4.75"/>
+      <rect x="60.25" y="77.25" width="4.75" height="4.75"/>
+      <rect x="65.00" y="77.25" width="4.75" height="4.75"/>
+      <rect x="69.75" y="77.25" width="4.75" height="4.75"/>
+      <rect x="74.50" y="77.25" width="4.75" height="4.75"/>
+      <rect x="79.25" y="77.25" width="4.75" height="4.75"/>
+      <rect x="88.75" y="77.25" width="4.75" height="4.75"/>
+      <rect x="93.50" y="77.25" width="4.75" height="4.75"/>
+      <rect x="103.00" y="77.25" width="4.75" height="4.75"/>
+      <rect x="107.75" y="77.25" width="4.75" height="4.75"/>
+      <rect x="112.50" y="77.25" width="4.75" height="4.75"/>
+      <rect x="126.75" y="77.25" width="4.75" height="4.75"/>
+      <rect x="136.25" y="77.25" width="4.75" height="4.75"/>
+      <rect x="12.75" y="82.00" width="4.75" height="4.75"/>
+      <rect x="17.50" y="82.00" width="4.75" height="4.75"/>
+      <rect x="22.25" y="82.00" width="4.75" height="4.75"/>
+      <rect x="27.00" y="82.00" width="4.75" height="4.75"/>
+      <rect x="31.75" y="82.00" width="4.75" height="4.75"/>
+      <rect x="36.50" y="82.00" width="4.75" height="4.75"/>
+      <rect x="41.25" y="82.00" width="4.75" height="4.75"/>
+      <rect x="46.00" y="82.00" width="4.75" height="4.75"/>
+      <rect x="60.25" y="82.00" width="4.75" height="4.75"/>
+      <rect x="65.00" y="82.00" width="4.75" height="4.75"/>
+      <rect x="74.50" y="82.00" width="4.75" height="4.75"/>
+      <rect x="79.25" y="82.00" width="4.75" height="4.75"/>
+      <rect x="84.00" y="82.00" width="4.75" height="4.75"/>
+      <rect x="88.75" y="82.00" width="4.75" height="4.75"/>
+      <rect x="98.25" y="82.00" width="4.75" height="4.75"/>
+      <rect x="103.00" y="82.00" width="4.75" height="4.75"/>
+      <rect x="107.75" y="82.00" width="4.75" height="4.75"/>
+      <rect x="112.50" y="82.00" width="4.75" height="4.75"/>
+      <rect x="117.25" y="82.00" width="4.75" height="4.75"/>
+      <rect x="126.75" y="82.00" width="4.75" height="4.75"/>
+      <rect x="136.25" y="82.00" width="4.75" height="4.75"/>
+      <rect x="141.00" y="82.00" width="4.75" height="4.75"/>
+      <rect x="12.75" y="86.75" width="4.75" height="4.75"/>
+      <rect x="17.50" y="86.75" width="4.75" height="4.75"/>
+      <rect x="22.25" y="86.75" width="4.75" height="4.75"/>
+      <rect x="41.25" y="86.75" width="4.75" height="4.75"/>
+      <rect x="46.00" y="86.75" width="4.75" height="4.75"/>
+      <rect x="50.75" y="86.75" width="4.75" height="4.75"/>
+      <rect x="55.50" y="86.75" width="4.75" height="4.75"/>
+      <rect x="65.00" y="86.75" width="4.75" height="4.75"/>
+      <rect x="84.00" y="86.75" width="4.75" height="4.75"/>
+      <rect x="93.50" y="86.75" width="4.75" height="4.75"/>
+      <rect x="107.75" y="86.75" width="4.75" height="4.75"/>
+      <rect x="112.50" y="86.75" width="4.75" height="4.75"/>
+      <rect x="126.75" y="86.75" width="4.75" height="4.75"/>
+      <rect x="131.50" y="86.75" width="4.75" height="4.75"/>
+      <rect x="141.00" y="86.75" width="4.75" height="4.75"/>
+      <rect x="8.00" y="91.50" width="4.75" height="4.75"/>
+      <rect x="17.50" y="91.50" width="4.75" height="4.75"/>
+      <rect x="27.00" y="91.50" width="4.75" height="4.75"/>
+      <rect x="31.75" y="91.50" width="4.75" height="4.75"/>
+      <rect x="36.50" y="91.50" width="4.75" height="4.75"/>
+      <rect x="60.25" y="91.50" width="4.75" height="4.75"/>
+      <rect x="65.00" y="91.50" width="4.75" height="4.75"/>
+      <rect x="69.75" y="91.50" width="4.75" height="4.75"/>
+      <rect x="107.75" y="91.50" width="4.75" height="4.75"/>
+      <rect x="112.50" y="91.50" width="4.75" height="4.75"/>
+      <rect x="117.25" y="91.50" width="4.75" height="4.75"/>
+      <rect x="122.00" y="91.50" width="4.75" height="4.75"/>
+      <rect x="136.25" y="91.50" width="4.75" height="4.75"/>
+      <rect x="141.00" y="91.50" width="4.75" height="4.75"/>
+      <rect x="12.75" y="96.25" width="4.75" height="4.75"/>
+      <rect x="17.50" y="96.25" width="4.75" height="4.75"/>
+      <rect x="41.25" y="96.25" width="4.75" height="4.75"/>
+      <rect x="46.00" y="96.25" width="4.75" height="4.75"/>
+      <rect x="50.75" y="96.25" width="4.75" height="4.75"/>
+      <rect x="60.25" y="96.25" width="4.75" height="4.75"/>
+      <rect x="88.75" y="96.25" width="4.75" height="4.75"/>
+      <rect x="93.50" y="96.25" width="4.75" height="4.75"/>
+      <rect x="98.25" y="96.25" width="4.75" height="4.75"/>
+      <rect x="103.00" y="96.25" width="4.75" height="4.75"/>
+      <rect x="107.75" y="96.25" width="4.75" height="4.75"/>
+      <rect x="112.50" y="96.25" width="4.75" height="4.75"/>
+      <rect x="117.25" y="96.25" width="4.75" height="4.75"/>
+      <rect x="122.00" y="96.25" width="4.75" height="4.75"/>
+      <rect x="126.75" y="96.25" width="4.75" height="4.75"/>
+      <rect x="136.25" y="96.25" width="4.75" height="4.75"/>
+      <rect x="8.00" y="101.00" width="4.75" height="4.75"/>
+      <rect x="17.50" y="101.00" width="4.75" height="4.75"/>
+      <rect x="36.50" y="101.00" width="4.75" height="4.75"/>
+      <rect x="41.25" y="101.00" width="4.75" height="4.75"/>
+      <rect x="55.50" y="101.00" width="4.75" height="4.75"/>
+      <rect x="60.25" y="101.00" width="4.75" height="4.75"/>
+      <rect x="65.00" y="101.00" width="4.75" height="4.75"/>
+      <rect x="88.75" y="101.00" width="4.75" height="4.75"/>
+      <rect x="103.00" y="101.00" width="4.75" height="4.75"/>
+      <rect x="107.75" y="101.00" width="4.75" height="4.75"/>
+      <rect x="112.50" y="101.00" width="4.75" height="4.75"/>
+      <rect x="117.25" y="101.00" width="4.75" height="4.75"/>
+      <rect x="122.00" y="101.00" width="4.75" height="4.75"/>
+      <rect x="46.00" y="105.75" width="4.75" height="4.75"/>
+      <rect x="55.50" y="105.75" width="4.75" height="4.75"/>
+      <rect x="69.75" y="105.75" width="4.75" height="4.75"/>
+      <rect x="84.00" y="105.75" width="4.75" height="4.75"/>
+      <rect x="88.75" y="105.75" width="4.75" height="4.75"/>
+      <rect x="93.50" y="105.75" width="4.75" height="4.75"/>
+      <rect x="98.25" y="105.75" width="4.75" height="4.75"/>
+      <rect x="103.00" y="105.75" width="4.75" height="4.75"/>
+      <rect x="131.50" y="105.75" width="4.75" height="4.75"/>
+      <rect x="136.25" y="105.75" width="4.75" height="4.75"/>
+      <rect x="141.00" y="105.75" width="4.75" height="4.75"/>
+      <rect x="8.00" y="110.50" width="4.75" height="4.75"/>
+      <rect x="12.75" y="110.50" width="4.75" height="4.75"/>
+      <rect x="17.50" y="110.50" width="4.75" height="4.75"/>
+      <rect x="22.25" y="110.50" width="4.75" height="4.75"/>
+      <rect x="27.00" y="110.50" width="4.75" height="4.75"/>
+      <rect x="31.75" y="110.50" width="4.75" height="4.75"/>
+      <rect x="36.50" y="110.50" width="4.75" height="4.75"/>
+      <rect x="50.75" y="110.50" width="4.75" height="4.75"/>
+      <rect x="55.50" y="110.50" width="4.75" height="4.75"/>
+      <rect x="60.25" y="110.50" width="4.75" height="4.75"/>
+      <rect x="74.50" y="110.50" width="4.75" height="4.75"/>
+      <rect x="79.25" y="110.50" width="4.75" height="4.75"/>
+      <rect x="88.75" y="110.50" width="4.75" height="4.75"/>
+      <rect x="93.50" y="110.50" width="4.75" height="4.75"/>
+      <rect x="98.25" y="110.50" width="4.75" height="4.75"/>
+      <rect x="103.00" y="110.50" width="4.75" height="4.75"/>
+      <rect x="112.50" y="110.50" width="4.75" height="4.75"/>
+      <rect x="122.00" y="110.50" width="4.75" height="4.75"/>
+      <rect x="126.75" y="110.50" width="4.75" height="4.75"/>
+      <rect x="136.25" y="110.50" width="4.75" height="4.75"/>
+      <rect x="141.00" y="110.50" width="4.75" height="4.75"/>
+      <rect x="8.00" y="115.25" width="4.75" height="4.75"/>
+      <rect x="36.50" y="115.25" width="4.75" height="4.75"/>
+      <rect x="46.00" y="115.25" width="4.75" height="4.75"/>
+      <rect x="50.75" y="115.25" width="4.75" height="4.75"/>
+      <rect x="69.75" y="115.25" width="4.75" height="4.75"/>
+      <rect x="74.50" y="115.25" width="4.75" height="4.75"/>
+      <rect x="79.25" y="115.25" width="4.75" height="4.75"/>
+      <rect x="88.75" y="115.25" width="4.75" height="4.75"/>
+      <rect x="103.00" y="115.25" width="4.75" height="4.75"/>
+      <rect x="112.50" y="115.25" width="4.75" height="4.75"/>
+      <rect x="122.00" y="115.25" width="4.75" height="4.75"/>
+      <rect x="126.75" y="115.25" width="4.75" height="4.75"/>
+      <rect x="136.25" y="115.25" width="4.75" height="4.75"/>
+      <rect x="8.00" y="120.00" width="4.75" height="4.75"/>
+      <rect x="17.50" y="120.00" width="4.75" height="4.75"/>
+      <rect x="22.25" y="120.00" width="4.75" height="4.75"/>
+      <rect x="27.00" y="120.00" width="4.75" height="4.75"/>
+      <rect x="36.50" y="120.00" width="4.75" height="4.75"/>
+      <rect x="50.75" y="120.00" width="4.75" height="4.75"/>
+      <rect x="74.50" y="120.00" width="4.75" height="4.75"/>
+      <rect x="84.00" y="120.00" width="4.75" height="4.75"/>
+      <rect x="88.75" y="120.00" width="4.75" height="4.75"/>
+      <rect x="93.50" y="120.00" width="4.75" height="4.75"/>
+      <rect x="107.75" y="120.00" width="4.75" height="4.75"/>
+      <rect x="112.50" y="120.00" width="4.75" height="4.75"/>
+      <rect x="117.25" y="120.00" width="4.75" height="4.75"/>
+      <rect x="122.00" y="120.00" width="4.75" height="4.75"/>
+      <rect x="136.25" y="120.00" width="4.75" height="4.75"/>
+      <rect x="141.00" y="120.00" width="4.75" height="4.75"/>
+      <rect x="8.00" y="124.75" width="4.75" height="4.75"/>
+      <rect x="17.50" y="124.75" width="4.75" height="4.75"/>
+      <rect x="22.25" y="124.75" width="4.75" height="4.75"/>
+      <rect x="27.00" y="124.75" width="4.75" height="4.75"/>
+      <rect x="36.50" y="124.75" width="4.75" height="4.75"/>
+      <rect x="46.00" y="124.75" width="4.75" height="4.75"/>
+      <rect x="50.75" y="124.75" width="4.75" height="4.75"/>
+      <rect x="55.50" y="124.75" width="4.75" height="4.75"/>
+      <rect x="60.25" y="124.75" width="4.75" height="4.75"/>
+      <rect x="74.50" y="124.75" width="4.75" height="4.75"/>
+      <rect x="84.00" y="124.75" width="4.75" height="4.75"/>
+      <rect x="103.00" y="124.75" width="4.75" height="4.75"/>
+      <rect x="117.25" y="124.75" width="4.75" height="4.75"/>
+      <rect x="122.00" y="124.75" width="4.75" height="4.75"/>
+      <rect x="131.50" y="124.75" width="4.75" height="4.75"/>
+      <rect x="136.25" y="124.75" width="4.75" height="4.75"/>
+      <rect x="141.00" y="124.75" width="4.75" height="4.75"/>
+      <rect x="8.00" y="129.50" width="4.75" height="4.75"/>
+      <rect x="17.50" y="129.50" width="4.75" height="4.75"/>
+      <rect x="22.25" y="129.50" width="4.75" height="4.75"/>
+      <rect x="27.00" y="129.50" width="4.75" height="4.75"/>
+      <rect x="36.50" y="129.50" width="4.75" height="4.75"/>
+      <rect x="69.75" y="129.50" width="4.75" height="4.75"/>
+      <rect x="74.50" y="129.50" width="4.75" height="4.75"/>
+      <rect x="84.00" y="129.50" width="4.75" height="4.75"/>
+      <rect x="88.75" y="129.50" width="4.75" height="4.75"/>
+      <rect x="98.25" y="129.50" width="4.75" height="4.75"/>
+      <rect x="117.25" y="129.50" width="4.75" height="4.75"/>
+      <rect x="122.00" y="129.50" width="4.75" height="4.75"/>
+      <rect x="126.75" y="129.50" width="4.75" height="4.75"/>
+      <rect x="141.00" y="129.50" width="4.75" height="4.75"/>
+      <rect x="8.00" y="134.25" width="4.75" height="4.75"/>
+      <rect x="36.50" y="134.25" width="4.75" height="4.75"/>
+      <rect x="46.00" y="134.25" width="4.75" height="4.75"/>
+      <rect x="50.75" y="134.25" width="4.75" height="4.75"/>
+      <rect x="65.00" y="134.25" width="4.75" height="4.75"/>
+      <rect x="69.75" y="134.25" width="4.75" height="4.75"/>
+      <rect x="74.50" y="134.25" width="4.75" height="4.75"/>
+      <rect x="88.75" y="134.25" width="4.75" height="4.75"/>
+      <rect x="93.50" y="134.25" width="4.75" height="4.75"/>
+      <rect x="98.25" y="134.25" width="4.75" height="4.75"/>
+      <rect x="103.00" y="134.25" width="4.75" height="4.75"/>
+      <rect x="107.75" y="134.25" width="4.75" height="4.75"/>
+      <rect x="122.00" y="134.25" width="4.75" height="4.75"/>
+      <rect x="136.25" y="134.25" width="4.75" height="4.75"/>
+      <rect x="8.00" y="139.00" width="4.75" height="4.75"/>
+      <rect x="12.75" y="139.00" width="4.75" height="4.75"/>
+      <rect x="17.50" y="139.00" width="4.75" height="4.75"/>
+      <rect x="22.25" y="139.00" width="4.75" height="4.75"/>
+      <rect x="27.00" y="139.00" width="4.75" height="4.75"/>
+      <rect x="31.75" y="139.00" width="4.75" height="4.75"/>
+      <rect x="36.50" y="139.00" width="4.75" height="4.75"/>
+      <rect x="60.25" y="139.00" width="4.75" height="4.75"/>
+      <rect x="74.50" y="139.00" width="4.75" height="4.75"/>
+      <rect x="84.00" y="139.00" width="4.75" height="4.75"/>
+      <rect x="98.25" y="139.00" width="4.75" height="4.75"/>
+      <rect x="103.00" y="139.00" width="4.75" height="4.75"/>
+      <rect x="107.75" y="139.00" width="4.75" height="4.75"/>
+      <rect x="117.25" y="139.00" width="4.75" height="4.75"/>
+      <rect x="122.00" y="139.00" width="4.75" height="4.75"/>
+      <rect x="136.25" y="139.00" width="4.75" height="4.75"/>
+      <rect x="141.00" y="139.00" width="4.75" height="4.75"/>
+    </g>
+
+    <!-- Pocket body -->
+    <use
+      href="#pocketShape"
+      fill="url(#pocket)"
+      stroke="#120f0c"
+      stroke-width="7"
+      stroke-linejoin="round"
+      filter="url(#shadow)"
+    />
+    <use href="#pocketShape" fill="url(#weave)"/>
+
+    <!-- Folded leather pocket rim -->
+    <path
+      d="M728 700Q877 734 1036 716L1034 762Q877 775 723 748Z"
+      fill="url(#rolledLeather)"
+      stroke="#201710"
+      stroke-width="3"
+      stroke-linejoin="round"
+      filter="url(#leatherTexture)"
+    />
+    <path
+      d="M729 701Q878 736 1035 717"
+      fill="none"
+      stroke="#8d6749"
+      stroke-width="3"
+      opacity=".55"
+    />
+    <path
+      d="M730 747Q881 774 1028 760"
+      fill="none"
+      stroke="#110e0b"
+      stroke-width="4"
+    />
+    <path
+      d="M733 744Q881 769 1029 755"
+      fill="none"
+      stroke="#ad7b4d"
+      stroke-width="1.8"
+      stroke-dasharray="6 5"
+      opacity=".8"
+    />
+
+    <!-- Pocket piping and stitching -->
+    <path
+      d="
+        M728 711L724 1029
+        Q724 1039 736 1040
+        L1009 1043
+        Q1019 1043 1019 1032
+        L1032 728
+      "
+      fill="none"
+      stroke="#503928"
+      stroke-width="7"
+      stroke-linecap="round"
+    />
+    <path
+      d="
+        M733 756L732 1023
+        Q732 1034 743 1034
+        L1005 1038
+        Q1010 1038 1011 1028
+        L1025 765
+      "
+      fill="none"
+      stroke="#b18050"
+      stroke-width="1.7"
+      stroke-dasharray="7 5"
+      stroke-linecap="round"
+      opacity=".73"
+    />
+    <path
+      d="M723 761L722 1028M1028 772L1016 1030"
+      fill="none"
+      stroke="#0c0b09"
+      stroke-width="2"
+      opacity=".7"
+    />
+    <path
+      d="M736 707L731 741M1029 722L1027 754"
+      fill="none"
+      stroke="#b1875f"
+      stroke-width="1.3"
+      opacity=".65"
+    />
+
+    <rect
+      x="58"
+      y="52"
+      width="1139"
+      height="1126"
+      fill="url(#vignette)"
+      pointer-events="none"
+    />
+  </g>
+</svg>

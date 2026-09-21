@@ -1,0 +1,80 @@
+appId: com.barista.labeldesigner
+productName: Barista
+copyright: Copyright © 2026 Albert Gomez
+
+publish:
+  provider: github
+  owner: albertgmz
+  repo: Barista
+generateUpdatesFilesForAllChannels: true
+
+directories:
+  output: release
+  buildResources: build
+
+# Koffi ships prebuilt N-API binaries and must not be rebuilt locally. Fabric's optional `canvas`
+# dependency is excluded below; attempting to rebuild it requires cairo/node-gyp and breaks the
+# Windows package. Any future compiled dependency must first replace this policy with a verified,
+# reproducible rebuild configuration.
+npmRebuild: false
+asar: true
+compression: maximum
+electronLanguages:
+  - en-US
+
+files:
+  - out/**
+  - package.json
+  - '!node_modules/**/*.map'
+  - '!node_modules/**/*.ts'
+  - '!node_modules/**/{test,tests,__tests__,docs,doc,example,examples}/**/*'
+  - '!node_modules/**/{CHANGELOG.md,README.md,readme.md}'
+  - '!node_modules/canvas{,/**}'
+
+extraResources:
+  - from: resources/fonts
+    to: fonts
+  - from: resources/generated
+    to: generated
+  - from: drizzle
+    to: drizzle
+
+win:
+  icon: build/icon.ico
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  fileAssociations:
+    - ext: bar
+      name: Barista Label
+      description: Barista label document
+      icon: build/icon.ico
+      role: Editor
+
+nsis:
+  artifactName: ${productName}-${version}-setup.${ext}
+  include: build/installer.nsh
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  installerHeaderIcon: build/icon.ico
+  installerHeader: build/installerHeader.bmp
+  installerSidebar: build/installerSidebar.bmp
+  uninstallerSidebar: build/uninstallerSidebar.bmp
+  license: LICENSE
+  oneClick: false
+  perMachine: false
+  allowElevation: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Barista
+  uninstallDisplayName: Barista
+  runAfterFinish: true
+  deleteAppDataOnUninstall: false
+
+portable:
+  artifactName: ${productName}-${version}-portable.${ext}

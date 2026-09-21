@@ -1,0 +1,35 @@
+<!-- Copyright (C) 2026 Albert Gomez. SPDX-License-Identifier: GPL-3.0-only -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/branding/icon.ico" sizes="any" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barista — Starting</title>
+    <link rel="stylesheet" href="/src/splash/splash.css" />
+  </head>
+  <body>
+    <main>
+      <section class="identity" aria-label="Barista">
+        <img src="/src/assets/logo.svg" width="66" height="66" alt="" />
+        <div>
+          <h1 id="name">Barista</h1>
+          <p id="release">Starting…</p>
+        </div>
+      </section>
+      <section class="startup">
+        <p id="status" role="status">Initializing application…</p>
+        <progress id="progress" max="1" value="0.08" aria-label="Startup progress"></progress>
+      </section>
+      <aside class="credits" aria-label="Credits">
+        <strong>BARISTA</strong>
+        <span>Label design and printing</span>
+        <span>© <span id="year"></span> Albert Gomez</span>
+        <span>Artwork: Kseniya Lapteva / Pixabay</span>
+        <span>GNU GPLv3 · No telemetry</span>
+      </aside>
+    </main>
+    <script type="module" src="/src/splash/splash.ts"></script>
+  </body>
+</html>
